@@ -1,0 +1,301 @@
+IdPedido,IdCliente,IdEmpleado,FechaPedido,ViaEnvio,CargoEnvio,Destinatario,NombreEmpresa,NombreContacto,CargoContacto,Ciudad,Pais,Apellidos,Nombres,CargoEmpleado
+1,C009,1,2025-04-05,3,246.23,Diez-Carbó,Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Navarrete,Guiomar,Marketing
+2,C029,5,2025-04-14,3,189.18,Merino Inc,"Yáñez, Molina and Julián",Nicanor Miralles,Field trials officer,La Coruña,Canadá,Castell,Esther,Logística
+3,C018,1,2024-11-10,2,179.11,Mesa PLC,Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Navarrete,Guiomar,Marketing
+4,C022,10,2025-01-26,2,92.02,Puente-Fiol,Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Serrano,Germán,Soporte Ventas
+5,C020,2,2023-10-17,2,236.5,"Herrero, Cal and Mata","Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Quiroga,Lourdes,Gerente Ventas
+6,C025,7,2025-06-09,1,129.15,"Carrillo, Armengol and Olivera",García-Quero,Celestino Pinilla Abril,Newspaper journalist,Zamora,Mónaco,Prada,Dora,Vendedor
+7,C027,9,2024-10-05,2,453.74,Pellicer-Bayón,Ayllón PLC,Lidia Criado Barberá,Rural practice surveyor,Cádiz,Belarús,Romero,Elpidio,Logística
+8,C011,6,2024-09-14,3,86.26,"Nogueira, Alberola and Rivera",Vergara Group,René Arévalo Canals,"Designer, ceramics/pottery",Zamora,Tayikistán,Amores,Victoria,Logística
+9,C018,8,2025-05-18,2,78.02,Camacho-Rosselló,Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Amores,Celso,Marketing
+10,C029,4,2024-05-26,2,148.74,"Segura, Coronado and Rozas","Yáñez, Molina and Julián",Nicanor Miralles,Field trials officer,La Coruña,Canadá,Solsona,Zaira,Marketing
+11,C022,1,2024-01-02,1,339.24,"Vélez, León and Tomás",Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Navarrete,Guiomar,Marketing
+12,C011,7,2024-08-14,2,388.4,Ledesma-Mora,Vergara Group,René Arévalo Canals,"Designer, ceramics/pottery",Zamora,Tayikistán,Prada,Dora,Vendedor
+13,C020,3,2025-06-10,1,106.8,Bolaños LLC,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Dalmau,Priscila,Gerente Ventas
+14,C006,10,2025-07-03,3,483.68,Hervás-Sobrino,Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Serrano,Germán,Soporte Ventas
+15,C019,7,2024-11-03,2,473.66,"Pinilla, Navarrete and Andrade","Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Prada,Dora,Vendedor
+16,C020,2,2024-09-05,3,402.19,Espada-Torrent,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Quiroga,Lourdes,Gerente Ventas
+17,C014,6,2024-01-30,3,451.21,Jordán-Niño,"Lago, Valle and Escalona",Zaira Camino,Hydrogeologist,Burgos,Kiribati,Amores,Victoria,Logística
+18,C009,8,2024-03-23,1,387.71,"Llorente, Agustín and Villanueva",Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Amores,Celso,Marketing
+19,C001,9,2024-01-14,1,88.53,Hernández Ltd,"Cantón, Amaya and Llopis",Dani de Calatayud,Sports administrator,Palencia,Maldivas,Romero,Elpidio,Logística
+20,C022,10,2024-06-29,2,262.97,Hernandez-Tamayo,Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Serrano,Germán,Soporte Ventas
+21,C004,9,2025-01-01,3,133.32,"Tudela, Samper and Alemany",Navarro Inc,Goyo Caballero Palomar,Local government officer,Zaragoza,Austria,Romero,Elpidio,Logística
+22,C010,4,2023-10-30,2,130.75,Giralt-Quiroga,Clavero-Landa,Duilio Jódar Romero,Television production assistant,Huesca,Estados Unidos de América,Solsona,Zaira,Marketing
+23,C010,3,2025-02-06,3,440.81,Medina Ltd,Clavero-Landa,Duilio Jódar Romero,Television production assistant,Huesca,Estados Unidos de América,Dalmau,Priscila,Gerente Ventas
+24,C016,2,2024-11-12,3,333.25,Sáenz-Núñez,Bermúdez Inc,Sabina Bayón Casas,"Conservation officer, historic buildings",Navarra,Côte d'Ivoire,Quiroga,Lourdes,Gerente Ventas
+25,C004,9,2024-07-14,2,322.84,"Muro, Ortiz and Santiago",Navarro Inc,Goyo Caballero Palomar,Local government officer,Zaragoza,Austria,Romero,Elpidio,Logística
+26,C020,1,2024-03-16,3,482.05,Iglesias-Gual,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Navarrete,Guiomar,Marketing
+27,C008,3,2023-11-20,3,83.78,"Fernández, Moles and Carreras",Cárdenas Group,Elba Gimenez Morata,Banker,Alicante,Indonesia,Dalmau,Priscila,Gerente Ventas
+28,C002,4,2025-03-18,2,368.13,"Esteve, Feliu and Gascón",Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Solsona,Zaira,Marketing
+29,C003,1,2025-03-14,1,406.68,Lloret-Zamorano,"Rivas, Giménez and Sanchez",Eligia Agudo-Cuervo,"Pharmacist, hospital",Cuenca,Comoras,Navarrete,Guiomar,Marketing
+30,C003,10,2024-11-24,1,450.24,Cabrera-Ferrera,"Rivas, Giménez and Sanchez",Eligia Agudo-Cuervo,"Pharmacist, hospital",Cuenca,Comoras,Serrano,Germán,Soporte Ventas
+31,C002,3,2024-04-05,2,283.53,Paniagua and Sons,Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Dalmau,Priscila,Gerente Ventas
+32,C014,8,2024-04-09,2,348.16,Castañeda LLC,"Lago, Valle and Escalona",Zaira Camino,Hydrogeologist,Burgos,Kiribati,Amores,Celso,Marketing
+33,C002,4,2023-09-23,3,212.8,Manzano Ltd,Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Solsona,Zaira,Marketing
+34,C023,3,2023-11-25,2,297.88,"Tudela, Calderon and Alberola",Checa-Roca,Emilio Sevillano Iborra,Call centre manager,Zaragoza,República Árabe Siria,Dalmau,Priscila,Gerente Ventas
+35,C016,4,2024-11-06,2,298.07,Soria-Tejero,Bermúdez Inc,Sabina Bayón Casas,"Conservation officer, historic buildings",Navarra,Côte d'Ivoire,Solsona,Zaira,Marketing
+36,C022,8,2024-07-26,1,250.95,Espinosa-Aznar,Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Amores,Celso,Marketing
+37,C011,8,2024-03-02,3,461.04,Carbonell-Bas,Vergara Group,René Arévalo Canals,"Designer, ceramics/pottery",Zamora,Tayikistán,Amores,Celso,Marketing
+38,C005,7,2024-06-25,3,486.48,Benavent-Baeza,"Segovia, Casanovas and Pinedo",Leoncio Marcos Pardo,Technical brewer,Teruel,Belarús,Prada,Dora,Vendedor
+39,C003,6,2023-12-14,3,436.7,Mateu Inc,"Rivas, Giménez and Sanchez",Eligia Agudo-Cuervo,"Pharmacist, hospital",Cuenca,Comoras,Amores,Victoria,Logística
+40,C006,5,2024-02-27,1,70.7,Rico PLC,Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Castell,Esther,Logística
+41,C017,7,2024-11-24,3,356.81,"Gonzalez, Yáñez and Pintor",Álamo-Rocha,Julián Font,Insurance underwriter,Sevilla,Sudáfrica,Prada,Dora,Vendedor
+42,C030,10,2024-08-02,1,154.48,Martinez-Romeu,"Marín, Sebastián and Molina",Adalberto Sedano Cabo,"Buyer, retail",Málaga,Georgia,Serrano,Germán,Soporte Ventas
+43,C019,5,2024-04-12,3,482.91,"Barrena, Cabezas and Galiano","Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Castell,Esther,Logística
+44,C023,5,2024-12-16,1,490.08,Lamas Ltd,Checa-Roca,Emilio Sevillano Iborra,Call centre manager,Zaragoza,República Árabe Siria,Castell,Esther,Logística
+45,C009,3,2023-10-21,3,93.72,Heredia and Sons,Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Dalmau,Priscila,Gerente Ventas
+46,C005,2,2024-10-20,2,197.02,Crespi Inc,"Segovia, Casanovas and Pinedo",Leoncio Marcos Pardo,Technical brewer,Teruel,Belarús,Quiroga,Lourdes,Gerente Ventas
+47,C003,3,2024-07-01,1,437.06,Soriano-Manuel,"Rivas, Giménez and Sanchez",Eligia Agudo-Cuervo,"Pharmacist, hospital",Cuenca,Comoras,Dalmau,Priscila,Gerente Ventas
+48,C022,4,2023-09-13,2,61.26,Maldonado Ltd,Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Solsona,Zaira,Marketing
+49,C010,8,2024-03-25,1,93.74,"Santiago, Belda and Guillen",Clavero-Landa,Duilio Jódar Romero,Television production assistant,Huesca,Estados Unidos de América,Amores,Celso,Marketing
+50,C021,2,2025-08-05,2,327.04,Figuerola-Rodríguez,Falcón-Busquets,Narciso Rosa Pablo,Pharmacologist,Lleida,Uzbekistán,Quiroga,Lourdes,Gerente Ventas
+51,C012,1,2023-11-16,2,174.15,"Gomila, Company and Larrañaga",Bartolomé-Plaza,María Solé Ángel,Food technologist,Soria,Uganda,Navarrete,Guiomar,Marketing
+52,C002,6,2025-05-22,1,494.97,Bellido Inc,Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Amores,Victoria,Logística
+53,C001,5,2023-12-25,1,494.39,Malo-Saavedra,"Cantón, Amaya and Llopis",Dani de Calatayud,Sports administrator,Palencia,Maldivas,Castell,Esther,Logística
+54,C009,1,2023-11-23,1,383.77,Mateu-Quevedo,Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Navarrete,Guiomar,Marketing
+55,C004,8,2024-03-17,3,149.7,"Uribe, Río and Bernat",Navarro Inc,Goyo Caballero Palomar,Local government officer,Zaragoza,Austria,Amores,Celso,Marketing
+56,C016,7,2024-11-25,2,358.74,Rosales Ltd,Bermúdez Inc,Sabina Bayón Casas,"Conservation officer, historic buildings",Navarra,Côte d'Ivoire,Prada,Dora,Vendedor
+57,C017,5,2024-04-25,2,277.5,"Ibáñez, Amigó and Bravo",Álamo-Rocha,Julián Font,Insurance underwriter,Sevilla,Sudáfrica,Castell,Esther,Logística
+58,C024,2,2024-02-12,2,242.04,"Almansa, Leon and Arjona",Ayuso Ltd,Socorro de Bueno,Fast food restaurant manager,La Rioja,Niger,Quiroga,Lourdes,Gerente Ventas
+59,C018,1,2025-04-02,3,480.48,Sosa PLC,Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Navarrete,Guiomar,Marketing
+60,C019,9,2025-01-06,1,119.63,Lobo-Escudero,"Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Romero,Elpidio,Logística
+61,C020,5,2024-11-15,1,131.19,Téllez-Bou,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Castell,Esther,Logística
+62,C024,9,2024-08-18,1,219.29,Real-Mínguez,Ayuso Ltd,Socorro de Bueno,Fast food restaurant manager,La Rioja,Niger,Romero,Elpidio,Logística
+63,C015,7,2024-04-24,2,323.18,"Calvo, Cuevas and Murcia",Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Prada,Dora,Vendedor
+64,C008,7,2024-07-03,3,74.65,"Valbuena, Maldonado and Pérez",Cárdenas Group,Elba Gimenez Morata,Banker,Alicante,Indonesia,Prada,Dora,Vendedor
+65,C024,7,2025-05-11,1,108.13,"Arco, Sanz and Borja",Ayuso Ltd,Socorro de Bueno,Fast food restaurant manager,La Rioja,Niger,Prada,Dora,Vendedor
+66,C015,2,2024-04-19,2,309.09,Morales-Carmona,Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Quiroga,Lourdes,Gerente Ventas
+67,C014,10,2025-04-10,2,285.78,Vilar-Abella,"Lago, Valle and Escalona",Zaira Camino,Hydrogeologist,Burgos,Kiribati,Serrano,Germán,Soporte Ventas
+68,C004,3,2025-01-10,2,138.77,"Sevilla, Reyes and Ballester",Navarro Inc,Goyo Caballero Palomar,Local government officer,Zaragoza,Austria,Dalmau,Priscila,Gerente Ventas
+69,C022,10,2024-01-11,3,335.88,"Pardo, Valentín and Salamanca",Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Serrano,Germán,Soporte Ventas
+70,C017,2,2025-03-31,2,257.78,Frutos LLC,Álamo-Rocha,Julián Font,Insurance underwriter,Sevilla,Sudáfrica,Quiroga,Lourdes,Gerente Ventas
+71,C020,9,2024-10-18,2,258.22,Maestre Group,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Romero,Elpidio,Logística
+72,C016,9,2025-07-03,1,480.98,"Tormo, Carrión and Andres",Bermúdez Inc,Sabina Bayón Casas,"Conservation officer, historic buildings",Navarra,Côte d'Ivoire,Romero,Elpidio,Logística
+73,C012,6,2024-12-20,2,224.34,"Heras, Cuadrado and Mercader",Bartolomé-Plaza,María Solé Ángel,Food technologist,Soria,Uganda,Amores,Victoria,Logística
+74,C009,10,2024-10-19,1,200.01,Raya Inc,Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Serrano,Germán,Soporte Ventas
+75,C018,7,2024-02-09,3,406.25,Serrano Inc,Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Prada,Dora,Vendedor
+76,C010,3,2025-01-03,1,203.78,Valentín Ltd,Clavero-Landa,Duilio Jódar Romero,Television production assistant,Huesca,Estados Unidos de América,Dalmau,Priscila,Gerente Ventas
+77,C020,7,2024-04-01,1,123.01,"Llano, Ribes and Tolosa","Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Prada,Dora,Vendedor
+78,C026,8,2024-08-19,1,290.31,Saura PLC,Rocha-Torrecilla,Claudio Martin Gelabert,Barrister,Valencia,Indonesia,Amores,Celso,Marketing
+79,C006,4,2023-12-09,3,112.28,Farré-Verdejo,Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Solsona,Zaira,Marketing
+80,C015,9,2025-03-20,1,423.97,Baños LLC,Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Romero,Elpidio,Logística
+81,C013,9,2025-04-10,2,156.1,Nieto-Vera,Lasa Ltd,Aurelia Marin Royo,"Designer, industrial/product",Álava,Uganda,Romero,Elpidio,Logística
+82,C021,6,2024-03-13,1,111.92,Luna Ltd,Falcón-Busquets,Narciso Rosa Pablo,Pharmacologist,Lleida,Uzbekistán,Amores,Victoria,Logística
+83,C018,10,2024-04-06,3,240.46,"Tovar, Comas and Salom",Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Serrano,Germán,Soporte Ventas
+84,C020,9,2024-10-10,1,334.38,Ochoa-Márquez,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Romero,Elpidio,Logística
+85,C006,2,2024-10-20,3,488.59,"Pi, Sarabia and Montserrat",Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Quiroga,Lourdes,Gerente Ventas
+86,C013,8,2025-06-24,1,336.05,Haro PLC,Lasa Ltd,Aurelia Marin Royo,"Designer, industrial/product",Álava,Uganda,Amores,Celso,Marketing
+87,C012,9,2024-06-11,2,416.08,Reig Inc,Bartolomé-Plaza,María Solé Ángel,Food technologist,Soria,Uganda,Romero,Elpidio,Logística
+88,C010,4,2024-04-22,1,406.0,"Suárez, Piquer and Polo",Clavero-Landa,Duilio Jódar Romero,Television production assistant,Huesca,Estados Unidos de América,Solsona,Zaira,Marketing
+89,C009,1,2025-01-15,3,136.0,"Cornejo, Valbuena and Arco",Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Navarrete,Guiomar,Marketing
+90,C023,8,2023-11-25,2,465.94,"Mármol, Cabrera and Sacristán",Checa-Roca,Emilio Sevillano Iborra,Call centre manager,Zaragoza,República Árabe Siria,Amores,Celso,Marketing
+91,C022,5,2023-11-04,2,250.66,"Saura, Alcántara and Cobos",Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Castell,Esther,Logística
+92,C017,3,2024-07-02,1,114.25,"Cortes, Benavides and Soria",Álamo-Rocha,Julián Font,Insurance underwriter,Sevilla,Sudáfrica,Dalmau,Priscila,Gerente Ventas
+93,C015,2,2025-04-17,3,111.96,Nevado-Puga,Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Quiroga,Lourdes,Gerente Ventas
+94,C004,5,2025-01-04,2,366.82,Moya Ltd,Navarro Inc,Goyo Caballero Palomar,Local government officer,Zaragoza,Austria,Castell,Esther,Logística
+95,C006,8,2025-06-16,1,414.73,"Pinto, Moliner and Torrents",Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Amores,Celso,Marketing
+96,C017,4,2025-06-26,1,493.31,"Araujo, Bayona and Guitart",Álamo-Rocha,Julián Font,Insurance underwriter,Sevilla,Sudáfrica,Solsona,Zaira,Marketing
+97,C005,10,2024-12-21,1,79.59,"Madrigal, Gordillo and Botella","Segovia, Casanovas and Pinedo",Leoncio Marcos Pardo,Technical brewer,Teruel,Belarús,Serrano,Germán,Soporte Ventas
+98,C005,9,2024-07-21,3,314.5,Cabrera Group,"Segovia, Casanovas and Pinedo",Leoncio Marcos Pardo,Technical brewer,Teruel,Belarús,Romero,Elpidio,Logística
+99,C011,4,2023-12-26,2,476.37,"Marí, Andres and Arteaga",Vergara Group,René Arévalo Canals,"Designer, ceramics/pottery",Zamora,Tayikistán,Solsona,Zaira,Marketing
+100,C021,3,2024-04-26,3,473.72,Marcos LLC,Falcón-Busquets,Narciso Rosa Pablo,Pharmacologist,Lleida,Uzbekistán,Dalmau,Priscila,Gerente Ventas
+101,C002,10,2024-06-05,2,343.01,Coello-Hidalgo,Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Serrano,Germán,Soporte Ventas
+102,C002,3,2024-10-04,2,237.03,Escolano-Domínguez,Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Dalmau,Priscila,Gerente Ventas
+103,C008,8,2024-01-01,1,170.36,Piñeiro PLC,Cárdenas Group,Elba Gimenez Morata,Banker,Alicante,Indonesia,Amores,Celso,Marketing
+104,C027,6,2025-01-30,3,374.51,Valenciano PLC,Ayllón PLC,Lidia Criado Barberá,Rural practice surveyor,Cádiz,Belarús,Amores,Victoria,Logística
+105,C013,9,2023-12-08,2,485.01,Serra Ltd,Lasa Ltd,Aurelia Marin Royo,"Designer, industrial/product",Álava,Uganda,Romero,Elpidio,Logística
+106,C018,1,2024-03-03,1,243.92,Jara-Agustí,Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Navarrete,Guiomar,Marketing
+107,C003,7,2025-07-17,3,252.66,Maestre-Cruz,"Rivas, Giménez and Sanchez",Eligia Agudo-Cuervo,"Pharmacist, hospital",Cuenca,Comoras,Prada,Dora,Vendedor
+108,C020,9,2023-10-15,2,275.04,Ojeda-Martínez,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Romero,Elpidio,Logística
+109,C015,3,2024-12-27,3,451.91,Ibáñez-Saura,Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Dalmau,Priscila,Gerente Ventas
+110,C017,9,2025-06-05,3,270.43,Flor-Planas,Álamo-Rocha,Julián Font,Insurance underwriter,Sevilla,Sudáfrica,Romero,Elpidio,Logística
+111,C016,5,2025-06-11,3,402.31,Campillo-Gálvez,Bermúdez Inc,Sabina Bayón Casas,"Conservation officer, historic buildings",Navarra,Côte d'Ivoire,Castell,Esther,Logística
+112,C027,4,2024-06-10,1,307.66,"Palomar, Marqués and Marquez",Ayllón PLC,Lidia Criado Barberá,Rural practice surveyor,Cádiz,Belarús,Solsona,Zaira,Marketing
+113,C014,4,2023-09-05,2,275.82,"Priego, Llobet and Aguiló","Lago, Valle and Escalona",Zaira Camino,Hydrogeologist,Burgos,Kiribati,Solsona,Zaira,Marketing
+114,C018,6,2024-10-31,3,397.4,"Avilés, Valdés and Macías",Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Amores,Victoria,Logística
+115,C023,8,2025-04-12,2,265.91,Ortuño and Sons,Checa-Roca,Emilio Sevillano Iborra,Call centre manager,Zaragoza,República Árabe Siria,Amores,Celso,Marketing
+116,C023,2,2024-12-25,2,465.8,Iglesia Ltd,Checa-Roca,Emilio Sevillano Iborra,Call centre manager,Zaragoza,República Árabe Siria,Quiroga,Lourdes,Gerente Ventas
+117,C019,4,2025-03-27,1,72.84,"Cerro, Caballero and Ariza","Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Solsona,Zaira,Marketing
+118,C025,3,2024-04-14,1,484.03,Aragonés-Patiño,García-Quero,Celestino Pinilla Abril,Newspaper journalist,Zamora,Mónaco,Dalmau,Priscila,Gerente Ventas
+119,C002,2,2025-03-09,3,308.36,Bosch LLC,Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Quiroga,Lourdes,Gerente Ventas
+120,C006,5,2024-04-28,1,54.17,"Ribes, Echevarría and Font",Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Castell,Esther,Logística
+121,C016,3,2023-11-29,3,260.61,"Paz, Valls and Llamas",Bermúdez Inc,Sabina Bayón Casas,"Conservation officer, historic buildings",Navarra,Côte d'Ivoire,Dalmau,Priscila,Gerente Ventas
+122,C011,5,2025-05-25,3,353.48,Jimenez Group,Vergara Group,René Arévalo Canals,"Designer, ceramics/pottery",Zamora,Tayikistán,Castell,Esther,Logística
+123,C022,2,2025-05-06,1,491.76,Nevado-Cardona,Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Quiroga,Lourdes,Gerente Ventas
+124,C021,6,2024-08-16,3,156.34,Chico and Sons,Falcón-Busquets,Narciso Rosa Pablo,Pharmacologist,Lleida,Uzbekistán,Amores,Victoria,Logística
+125,C025,5,2025-06-17,3,102.84,"Puerta, Paz and Bosch",García-Quero,Celestino Pinilla Abril,Newspaper journalist,Zamora,Mónaco,Castell,Esther,Logística
+126,C023,9,2025-04-24,2,390.81,Alcalá-Lamas,Checa-Roca,Emilio Sevillano Iborra,Call centre manager,Zaragoza,República Árabe Siria,Romero,Elpidio,Logística
+127,C004,1,2024-10-08,3,456.3,Sanz LLC,Navarro Inc,Goyo Caballero Palomar,Local government officer,Zaragoza,Austria,Navarrete,Guiomar,Marketing
+128,C007,10,2025-01-22,2,90.92,"Juárez, Piquer and Pera",Cánovas-Pellicer,Clementina Lasa Bellido,Transport planner,Murcia,Uzbekistán,Serrano,Germán,Soporte Ventas
+129,C027,1,2023-11-11,3,148.06,"Guillen, Soto and Amaya",Ayllón PLC,Lidia Criado Barberá,Rural practice surveyor,Cádiz,Belarús,Navarrete,Guiomar,Marketing
+130,C002,2,2024-12-12,2,64.28,"Mosquera, Giralt and Barroso",Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Quiroga,Lourdes,Gerente Ventas
+131,C021,6,2024-12-24,1,130.31,Matas-Real,Falcón-Busquets,Narciso Rosa Pablo,Pharmacologist,Lleida,Uzbekistán,Amores,Victoria,Logística
+132,C015,6,2023-11-17,1,174.04,Arrieta Inc,Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Amores,Victoria,Logística
+133,C003,2,2024-04-11,3,65.11,Carmona-Cabanillas,"Rivas, Giménez and Sanchez",Eligia Agudo-Cuervo,"Pharmacist, hospital",Cuenca,Comoras,Quiroga,Lourdes,Gerente Ventas
+134,C007,1,2024-02-17,1,276.75,"Cerdá, Pont and Santiago",Cánovas-Pellicer,Clementina Lasa Bellido,Transport planner,Murcia,Uzbekistán,Navarrete,Guiomar,Marketing
+135,C014,5,2024-06-02,2,77.43,"Rius, Cortes and Ribera","Lago, Valle and Escalona",Zaira Camino,Hydrogeologist,Burgos,Kiribati,Castell,Esther,Logística
+136,C011,7,2025-01-08,2,117.15,Tovar PLC,Vergara Group,René Arévalo Canals,"Designer, ceramics/pottery",Zamora,Tayikistán,Prada,Dora,Vendedor
+137,C013,4,2024-06-30,2,141.5,Aparicio-Pellicer,Lasa Ltd,Aurelia Marin Royo,"Designer, industrial/product",Álava,Uganda,Solsona,Zaira,Marketing
+138,C009,7,2024-02-03,3,322.24,Sales-Guzman,Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Prada,Dora,Vendedor
+139,C016,4,2025-06-13,2,186.43,Cabezas-Pedrero,Bermúdez Inc,Sabina Bayón Casas,"Conservation officer, historic buildings",Navarra,Côte d'Ivoire,Solsona,Zaira,Marketing
+140,C023,10,2024-10-14,3,142.03,"Palmer, Barrera and Puig",Checa-Roca,Emilio Sevillano Iborra,Call centre manager,Zaragoza,República Árabe Siria,Serrano,Germán,Soporte Ventas
+141,C009,6,2024-03-20,3,447.27,Carvajal Group,Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Amores,Victoria,Logística
+142,C019,7,2023-10-29,2,118.59,"Garay, Almazán and Ayuso","Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Prada,Dora,Vendedor
+143,C006,6,2025-04-21,1,112.98,Hervia-Casas,Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Amores,Victoria,Logística
+144,C005,1,2025-04-21,1,277.58,"Fuertes, Bayona and Galan","Segovia, Casanovas and Pinedo",Leoncio Marcos Pardo,Technical brewer,Teruel,Belarús,Navarrete,Guiomar,Marketing
+145,C014,1,2024-11-16,1,288.24,Guijarro LLC,"Lago, Valle and Escalona",Zaira Camino,Hydrogeologist,Burgos,Kiribati,Navarrete,Guiomar,Marketing
+146,C020,9,2025-04-11,2,416.85,Acedo LLC,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Romero,Elpidio,Logística
+147,C028,1,2025-06-15,1,232.38,Castillo PLC,"Bayo, Gutierrez and Quintanilla",Victor Hoz Ariño,Water quality scientist,La Rioja,Sudán del Sur,Navarrete,Guiomar,Marketing
+148,C008,4,2024-02-29,3,449.4,Canet Ltd,Cárdenas Group,Elba Gimenez Morata,Banker,Alicante,Indonesia,Solsona,Zaira,Marketing
+149,C027,7,2025-06-21,1,184.67,Catalá Inc,Ayllón PLC,Lidia Criado Barberá,Rural practice surveyor,Cádiz,Belarús,Prada,Dora,Vendedor
+150,C024,6,2024-05-23,1,93.96,Morante Inc,Ayuso Ltd,Socorro de Bueno,Fast food restaurant manager,La Rioja,Niger,Amores,Victoria,Logística
+151,C009,8,2024-01-01,2,152.66,Badía-Castañeda,Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Amores,Celso,Marketing
+152,C026,3,2025-03-17,3,225.33,Zorrilla-Carballo,Rocha-Torrecilla,Claudio Martin Gelabert,Barrister,Valencia,Indonesia,Dalmau,Priscila,Gerente Ventas
+153,C015,9,2025-03-20,3,280.6,Tamayo Group,Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Romero,Elpidio,Logística
+154,C020,6,2025-04-14,2,55.55,Vilanova-Canales,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Amores,Victoria,Logística
+155,C016,3,2024-08-04,1,125.24,"Giralt, Aroca and Vázquez",Bermúdez Inc,Sabina Bayón Casas,"Conservation officer, historic buildings",Navarra,Côte d'Ivoire,Dalmau,Priscila,Gerente Ventas
+156,C004,3,2024-04-09,2,53.05,Anguita-Barrera,Navarro Inc,Goyo Caballero Palomar,Local government officer,Zaragoza,Austria,Dalmau,Priscila,Gerente Ventas
+157,C011,3,2024-08-25,2,485.93,Roldan-Campoy,Vergara Group,René Arévalo Canals,"Designer, ceramics/pottery",Zamora,Tayikistán,Dalmau,Priscila,Gerente Ventas
+158,C019,9,2024-09-02,1,356.77,"Salcedo, Beltrán and Berrocal","Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Romero,Elpidio,Logística
+159,C022,8,2024-04-25,1,335.0,"Colomer, Bastida and Cases",Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Amores,Celso,Marketing
+160,C019,7,2024-03-19,3,277.98,"Morcillo, Piquer and Mariño","Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Prada,Dora,Vendedor
+161,C019,7,2024-08-05,2,484.57,"Ros, Cabezas and Carbó","Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Prada,Dora,Vendedor
+162,C015,10,2025-06-11,3,275.21,"Garrido, Ropero and Sanmiguel",Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Serrano,Germán,Soporte Ventas
+163,C026,4,2025-07-08,3,267.32,Riba LLC,Rocha-Torrecilla,Claudio Martin Gelabert,Barrister,Valencia,Indonesia,Solsona,Zaira,Marketing
+164,C026,3,2025-05-22,3,159.76,Pujadas-Ricart,Rocha-Torrecilla,Claudio Martin Gelabert,Barrister,Valencia,Indonesia,Dalmau,Priscila,Gerente Ventas
+165,C006,3,2025-03-07,3,345.79,Milla Group,Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Dalmau,Priscila,Gerente Ventas
+166,C026,9,2024-04-17,1,214.61,"Jara, Perelló and Corominas",Rocha-Torrecilla,Claudio Martin Gelabert,Barrister,Valencia,Indonesia,Romero,Elpidio,Logística
+167,C013,10,2025-02-02,2,314.15,Bautista-Bou,Lasa Ltd,Aurelia Marin Royo,"Designer, industrial/product",Álava,Uganda,Serrano,Germán,Soporte Ventas
+168,C008,5,2025-05-26,1,132.37,Buendía Group,Cárdenas Group,Elba Gimenez Morata,Banker,Alicante,Indonesia,Castell,Esther,Logística
+169,C016,9,2023-11-02,3,463.62,"Peralta, Castillo and Barreda",Bermúdez Inc,Sabina Bayón Casas,"Conservation officer, historic buildings",Navarra,Côte d'Ivoire,Romero,Elpidio,Logística
+170,C002,6,2024-11-16,1,268.07,"Murcia, Carvajal and Reig",Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Amores,Victoria,Logística
+171,C023,8,2024-05-19,2,125.26,"Rocha, Aznar and Maestre",Checa-Roca,Emilio Sevillano Iborra,Call centre manager,Zaragoza,República Árabe Siria,Amores,Celso,Marketing
+172,C010,3,2024-11-27,2,304.54,Ortiz-Calleja,Clavero-Landa,Duilio Jódar Romero,Television production assistant,Huesca,Estados Unidos de América,Dalmau,Priscila,Gerente Ventas
+173,C024,4,2024-11-09,2,443.66,"Garcia, Cortes and Toledo",Ayuso Ltd,Socorro de Bueno,Fast food restaurant manager,La Rioja,Niger,Solsona,Zaira,Marketing
+174,C025,4,2024-02-09,1,414.82,Ordóñez PLC,García-Quero,Celestino Pinilla Abril,Newspaper journalist,Zamora,Mónaco,Solsona,Zaira,Marketing
+175,C020,9,2024-05-30,1,195.64,Lopez PLC,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Romero,Elpidio,Logística
+176,C028,3,2024-02-10,1,115.81,Amo-Lastra,"Bayo, Gutierrez and Quintanilla",Victor Hoz Ariño,Water quality scientist,La Rioja,Sudán del Sur,Dalmau,Priscila,Gerente Ventas
+177,C026,2,2023-09-10,2,282.03,Llano Ltd,Rocha-Torrecilla,Claudio Martin Gelabert,Barrister,Valencia,Indonesia,Quiroga,Lourdes,Gerente Ventas
+178,C026,9,2025-04-02,2,148.02,Nicolás-Orozco,Rocha-Torrecilla,Claudio Martin Gelabert,Barrister,Valencia,Indonesia,Romero,Elpidio,Logística
+179,C004,8,2023-08-23,1,105.91,Clemente PLC,Navarro Inc,Goyo Caballero Palomar,Local government officer,Zaragoza,Austria,Amores,Celso,Marketing
+180,C028,5,2025-01-10,1,344.56,Baños-Cifuentes,"Bayo, Gutierrez and Quintanilla",Victor Hoz Ariño,Water quality scientist,La Rioja,Sudán del Sur,Castell,Esther,Logística
+181,C021,2,2025-03-16,3,92.83,"Anglada, Bravo and Garrido",Falcón-Busquets,Narciso Rosa Pablo,Pharmacologist,Lleida,Uzbekistán,Quiroga,Lourdes,Gerente Ventas
+182,C001,6,2024-06-06,1,494.67,Santiago-Nogueira,"Cantón, Amaya and Llopis",Dani de Calatayud,Sports administrator,Palencia,Maldivas,Amores,Victoria,Logística
+183,C021,3,2023-12-19,1,288.73,Mesa-Morata,Falcón-Busquets,Narciso Rosa Pablo,Pharmacologist,Lleida,Uzbekistán,Dalmau,Priscila,Gerente Ventas
+184,C024,3,2025-04-13,2,327.23,"Blazquez, Badía and Cortés",Ayuso Ltd,Socorro de Bueno,Fast food restaurant manager,La Rioja,Niger,Dalmau,Priscila,Gerente Ventas
+185,C018,10,2023-12-19,3,374.53,"Ayala, Bilbao and Lladó",Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Serrano,Germán,Soporte Ventas
+186,C002,4,2024-07-28,2,223.65,"Rodrigo, Torralba and Salamanca",Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Solsona,Zaira,Marketing
+187,C028,10,2024-07-05,2,214.44,Garriga-Vila,"Bayo, Gutierrez and Quintanilla",Victor Hoz Ariño,Water quality scientist,La Rioja,Sudán del Sur,Serrano,Germán,Soporte Ventas
+188,C030,1,2023-11-15,2,277.97,Ropero-Cantero,"Marín, Sebastián and Molina",Adalberto Sedano Cabo,"Buyer, retail",Málaga,Georgia,Navarrete,Guiomar,Marketing
+189,C018,6,2024-03-26,2,313.9,"Torrecilla, Águila and Mendez",Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Amores,Victoria,Logística
+190,C003,7,2023-09-23,1,254.02,Prats PLC,"Rivas, Giménez and Sanchez",Eligia Agudo-Cuervo,"Pharmacist, hospital",Cuenca,Comoras,Prada,Dora,Vendedor
+191,C001,3,2023-09-30,2,478.86,Fuente LLC,"Cantón, Amaya and Llopis",Dani de Calatayud,Sports administrator,Palencia,Maldivas,Dalmau,Priscila,Gerente Ventas
+192,C023,10,2024-01-30,3,84.68,Jaume LLC,Checa-Roca,Emilio Sevillano Iborra,Call centre manager,Zaragoza,República Árabe Siria,Serrano,Germán,Soporte Ventas
+193,C017,1,2024-04-29,1,436.41,Aguilera Group,Álamo-Rocha,Julián Font,Insurance underwriter,Sevilla,Sudáfrica,Navarrete,Guiomar,Marketing
+194,C006,1,2025-03-21,3,411.4,Echevarría-Castelló,Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Navarrete,Guiomar,Marketing
+195,C026,9,2024-06-09,1,479.34,"Grau, Vall and Pablo",Rocha-Torrecilla,Claudio Martin Gelabert,Barrister,Valencia,Indonesia,Romero,Elpidio,Logística
+196,C015,1,2023-10-13,2,140.3,Arnal-Rubio,Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Navarrete,Guiomar,Marketing
+197,C001,4,2023-09-02,3,205.89,Bermejo-Millán,"Cantón, Amaya and Llopis",Dani de Calatayud,Sports administrator,Palencia,Maldivas,Solsona,Zaira,Marketing
+198,C007,9,2024-11-08,1,238.92,Quiroga-Rios,Cánovas-Pellicer,Clementina Lasa Bellido,Transport planner,Murcia,Uzbekistán,Romero,Elpidio,Logística
+199,C014,6,2024-03-30,2,488.55,Quirós Inc,"Lago, Valle and Escalona",Zaira Camino,Hydrogeologist,Burgos,Kiribati,Amores,Victoria,Logística
+200,C019,10,2024-04-27,1,245.74,Seguí Ltd,"Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Serrano,Germán,Soporte Ventas
+201,C009,4,2025-08-02,1,474.6,Borja-Rueda,Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Solsona,Zaira,Marketing
+202,C004,9,2025-06-04,2,484.09,Hervia Group,Navarro Inc,Goyo Caballero Palomar,Local government officer,Zaragoza,Austria,Romero,Elpidio,Logística
+203,C023,10,2024-11-18,1,146.76,Zamora-Bermúdez,Checa-Roca,Emilio Sevillano Iborra,Call centre manager,Zaragoza,República Árabe Siria,Serrano,Germán,Soporte Ventas
+204,C001,7,2024-06-21,2,300.18,Nicolás-Giralt,"Cantón, Amaya and Llopis",Dani de Calatayud,Sports administrator,Palencia,Maldivas,Prada,Dora,Vendedor
+205,C007,7,2024-05-03,2,358.83,Benito PLC,Cánovas-Pellicer,Clementina Lasa Bellido,Transport planner,Murcia,Uzbekistán,Prada,Dora,Vendedor
+206,C007,8,2024-12-22,1,91.39,Viana and Sons,Cánovas-Pellicer,Clementina Lasa Bellido,Transport planner,Murcia,Uzbekistán,Amores,Celso,Marketing
+207,C014,3,2025-07-22,2,146.62,Ortega-Coloma,"Lago, Valle and Escalona",Zaira Camino,Hydrogeologist,Burgos,Kiribati,Dalmau,Priscila,Gerente Ventas
+208,C021,5,2024-02-18,2,235.4,Coll LLC,Falcón-Busquets,Narciso Rosa Pablo,Pharmacologist,Lleida,Uzbekistán,Castell,Esther,Logística
+209,C018,8,2024-01-19,2,460.7,Coronado Ltd,Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Amores,Celso,Marketing
+210,C012,10,2023-10-16,1,488.29,Uribe Group,Bartolomé-Plaza,María Solé Ángel,Food technologist,Soria,Uganda,Serrano,Germán,Soporte Ventas
+211,C019,7,2025-03-26,2,470.84,"Sanchez, Moraleda and Molina","Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Prada,Dora,Vendedor
+212,C019,3,2023-12-14,3,476.77,Bayo-Somoza,"Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Dalmau,Priscila,Gerente Ventas
+213,C030,10,2024-07-27,1,412.9,"Mateo, Llobet and Barbero","Marín, Sebastián and Molina",Adalberto Sedano Cabo,"Buyer, retail",Málaga,Georgia,Serrano,Germán,Soporte Ventas
+214,C023,7,2024-05-18,3,95.46,"Benavent, Menéndez and Serrano",Checa-Roca,Emilio Sevillano Iborra,Call centre manager,Zaragoza,República Árabe Siria,Prada,Dora,Vendedor
+215,C008,10,2024-08-04,1,220.27,Barberá LLC,Cárdenas Group,Elba Gimenez Morata,Banker,Alicante,Indonesia,Serrano,Germán,Soporte Ventas
+216,C008,10,2025-05-25,1,471.51,Benítez-Bosch,Cárdenas Group,Elba Gimenez Morata,Banker,Alicante,Indonesia,Serrano,Germán,Soporte Ventas
+217,C022,6,2024-12-08,2,55.13,"Vendrell, Planas and Sevillano",Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Amores,Victoria,Logística
+218,C015,7,2024-11-11,1,448.05,"Armengol, Sandoval and Fabra",Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Prada,Dora,Vendedor
+219,C009,2,2024-04-24,1,203.81,"Tamarit, Vallejo and Contreras",Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Quiroga,Lourdes,Gerente Ventas
+220,C006,1,2023-10-06,1,198.99,Calderón-Nuñez,Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Navarrete,Guiomar,Marketing
+221,C004,1,2025-02-23,2,307.3,Vargas Ltd,Navarro Inc,Goyo Caballero Palomar,Local government officer,Zaragoza,Austria,Navarrete,Guiomar,Marketing
+222,C010,2,2023-12-31,2,429.7,Huguet Ltd,Clavero-Landa,Duilio Jódar Romero,Television production assistant,Huesca,Estados Unidos de América,Quiroga,Lourdes,Gerente Ventas
+223,C012,3,2024-07-24,2,70.08,Zamora-Yáñez,Bartolomé-Plaza,María Solé Ángel,Food technologist,Soria,Uganda,Dalmau,Priscila,Gerente Ventas
+224,C018,1,2024-12-04,2,418.28,Pascual LLC,Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Navarrete,Guiomar,Marketing
+225,C020,3,2025-07-31,1,477.16,Ponce-Rebollo,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Dalmau,Priscila,Gerente Ventas
+226,C011,2,2025-04-11,1,224.64,Badía-Nadal,Vergara Group,René Arévalo Canals,"Designer, ceramics/pottery",Zamora,Tayikistán,Quiroga,Lourdes,Gerente Ventas
+227,C019,10,2023-10-09,3,391.27,Busquets-Pomares,"Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Serrano,Germán,Soporte Ventas
+228,C029,7,2024-03-26,2,222.37,Conesa-Mínguez,"Yáñez, Molina and Julián",Nicanor Miralles,Field trials officer,La Coruña,Canadá,Prada,Dora,Vendedor
+229,C008,1,2023-10-21,3,263.85,"Cid, Olmo and Menéndez",Cárdenas Group,Elba Gimenez Morata,Banker,Alicante,Indonesia,Navarrete,Guiomar,Marketing
+230,C015,6,2025-01-09,2,377.96,"Pou, Castelló and Blazquez",Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Amores,Victoria,Logística
+231,C028,6,2024-04-15,1,281.87,"Peñas, Moya and Castell","Bayo, Gutierrez and Quintanilla",Victor Hoz Ariño,Water quality scientist,La Rioja,Sudán del Sur,Amores,Victoria,Logística
+232,C006,4,2025-01-20,1,426.64,"Zurita, Bueno and Roda",Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Solsona,Zaira,Marketing
+233,C013,2,2024-09-16,3,63.75,Alfaro-Pareja,Lasa Ltd,Aurelia Marin Royo,"Designer, industrial/product",Álava,Uganda,Quiroga,Lourdes,Gerente Ventas
+234,C027,2,2024-04-14,2,62.35,Gargallo LLC,Ayllón PLC,Lidia Criado Barberá,Rural practice surveyor,Cádiz,Belarús,Quiroga,Lourdes,Gerente Ventas
+235,C007,5,2025-04-05,3,234.28,Fernandez-Gonzalo,Cánovas-Pellicer,Clementina Lasa Bellido,Transport planner,Murcia,Uzbekistán,Castell,Esther,Logística
+236,C026,1,2023-12-03,1,163.58,Berenguer LLC,Rocha-Torrecilla,Claudio Martin Gelabert,Barrister,Valencia,Indonesia,Navarrete,Guiomar,Marketing
+237,C013,10,2025-06-04,1,53.31,Vera PLC,Lasa Ltd,Aurelia Marin Royo,"Designer, industrial/product",Álava,Uganda,Serrano,Germán,Soporte Ventas
+238,C011,5,2025-05-28,2,345.25,"Zurita, Arellano and Navarro",Vergara Group,René Arévalo Canals,"Designer, ceramics/pottery",Zamora,Tayikistán,Castell,Esther,Logística
+239,C016,5,2025-06-29,2,458.11,"Castro, Peñas and Correa",Bermúdez Inc,Sabina Bayón Casas,"Conservation officer, historic buildings",Navarra,Côte d'Ivoire,Castell,Esther,Logística
+240,C029,9,2023-12-23,1,182.2,Daza Ltd,"Yáñez, Molina and Julián",Nicanor Miralles,Field trials officer,La Coruña,Canadá,Romero,Elpidio,Logística
+241,C012,5,2024-07-23,3,182.32,Reig LLC,Bartolomé-Plaza,María Solé Ángel,Food technologist,Soria,Uganda,Castell,Esther,Logística
+242,C003,8,2025-01-25,1,275.21,"Gámez, Saldaña and López","Rivas, Giménez and Sanchez",Eligia Agudo-Cuervo,"Pharmacist, hospital",Cuenca,Comoras,Amores,Celso,Marketing
+243,C016,6,2025-03-25,3,493.99,"Sanchez, Guillén and Haro",Bermúdez Inc,Sabina Bayón Casas,"Conservation officer, historic buildings",Navarra,Côte d'Ivoire,Amores,Victoria,Logística
+244,C020,7,2024-04-15,3,243.23,Ferrera-Pedro,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Prada,Dora,Vendedor
+245,C024,4,2025-01-26,1,362.09,"Saez, Serrano and Luján",Ayuso Ltd,Socorro de Bueno,Fast food restaurant manager,La Rioja,Niger,Solsona,Zaira,Marketing
+246,C015,9,2025-04-14,3,285.85,Valverde-Álamo,Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Romero,Elpidio,Logística
+247,C001,10,2024-07-09,3,126.04,Flores PLC,"Cantón, Amaya and Llopis",Dani de Calatayud,Sports administrator,Palencia,Maldivas,Serrano,Germán,Soporte Ventas
+248,C027,1,2023-12-04,1,360.39,Azorin-Terrón,Ayllón PLC,Lidia Criado Barberá,Rural practice surveyor,Cádiz,Belarús,Navarrete,Guiomar,Marketing
+249,C017,5,2025-06-27,3,322.54,Calderon-Villalobos,Álamo-Rocha,Julián Font,Insurance underwriter,Sevilla,Sudáfrica,Castell,Esther,Logística
+250,C007,10,2025-06-10,1,400.08,López Inc,Cánovas-Pellicer,Clementina Lasa Bellido,Transport planner,Murcia,Uzbekistán,Serrano,Germán,Soporte Ventas
+251,C030,8,2025-04-02,2,155.53,Llamas Group,"Marín, Sebastián and Molina",Adalberto Sedano Cabo,"Buyer, retail",Málaga,Georgia,Amores,Celso,Marketing
+252,C003,9,2025-07-22,1,375.6,"Colom, Ruiz and Bravo","Rivas, Giménez and Sanchez",Eligia Agudo-Cuervo,"Pharmacist, hospital",Cuenca,Comoras,Romero,Elpidio,Logística
+253,C002,2,2025-07-26,1,443.36,Sanmartín LLC,Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Quiroga,Lourdes,Gerente Ventas
+254,C012,8,2025-08-10,3,170.74,Ribera Inc,Bartolomé-Plaza,María Solé Ángel,Food technologist,Soria,Uganda,Amores,Celso,Marketing
+255,C015,5,2024-06-21,2,360.46,"Pereira, Gutiérrez and Polo",Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Castell,Esther,Logística
+256,C013,6,2023-10-21,3,62.97,Gomez-Anaya,Lasa Ltd,Aurelia Marin Royo,"Designer, industrial/product",Álava,Uganda,Amores,Victoria,Logística
+257,C011,1,2024-04-22,3,440.75,Naranjo and Sons,Vergara Group,René Arévalo Canals,"Designer, ceramics/pottery",Zamora,Tayikistán,Navarrete,Guiomar,Marketing
+258,C012,7,2023-12-03,1,427.56,Madrid Group,Bartolomé-Plaza,María Solé Ángel,Food technologist,Soria,Uganda,Prada,Dora,Vendedor
+259,C003,8,2025-02-09,2,158.4,Somoza Group,"Rivas, Giménez and Sanchez",Eligia Agudo-Cuervo,"Pharmacist, hospital",Cuenca,Comoras,Amores,Celso,Marketing
+260,C003,8,2024-12-08,2,192.23,Bernad Inc,"Rivas, Giménez and Sanchez",Eligia Agudo-Cuervo,"Pharmacist, hospital",Cuenca,Comoras,Amores,Celso,Marketing
+261,C018,4,2024-03-04,3,352.16,Conde PLC,Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Solsona,Zaira,Marketing
+262,C015,2,2025-08-18,1,391.69,"Álamo, Rocha and Cantero",Abascal PLC,Laura Aliaga Caparrós,Medical laboratory scientific officer,Ciudad,Bahrein,Quiroga,Lourdes,Gerente Ventas
+263,C004,1,2025-04-12,1,271.59,Gámez-Mascaró,Navarro Inc,Goyo Caballero Palomar,Local government officer,Zaragoza,Austria,Navarrete,Guiomar,Marketing
+264,C027,10,2023-11-21,1,397.47,Gómez Group,Ayllón PLC,Lidia Criado Barberá,Rural practice surveyor,Cádiz,Belarús,Serrano,Germán,Soporte Ventas
+265,C019,3,2024-12-27,3,416.86,"Sebastián, Barros and Cantero","Grau, Giménez and Aguilar",Paulino Barral Granados,Broadcast journalist,Guipúzcoa,Bélgica,Dalmau,Priscila,Gerente Ventas
+266,C014,10,2025-05-29,3,393.07,Alegre-Villalba,"Lago, Valle and Escalona",Zaira Camino,Hydrogeologist,Burgos,Kiribati,Serrano,Germán,Soporte Ventas
+267,C018,6,2024-11-07,3,381.57,Cobo LLC,Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Amores,Victoria,Logística
+268,C018,6,2024-07-17,3,101.93,Osorio and Sons,Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Amores,Victoria,Logística
+269,C001,7,2024-11-04,1,73.88,Exposito-Boada,"Cantón, Amaya and Llopis",Dani de Calatayud,Sports administrator,Palencia,Maldivas,Prada,Dora,Vendedor
+270,C027,1,2024-09-28,3,402.96,Bauzà-Zorrilla,Ayllón PLC,Lidia Criado Barberá,Rural practice surveyor,Cádiz,Belarús,Navarrete,Guiomar,Marketing
+271,C024,9,2024-10-14,2,156.92,"Vera, Almagro and Portero",Ayuso Ltd,Socorro de Bueno,Fast food restaurant manager,La Rioja,Niger,Romero,Elpidio,Logística
+272,C020,8,2025-06-27,1,460.17,Arranz-Pombo,"Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Amores,Celso,Marketing
+273,C006,9,2024-06-03,1,219.74,Alegre-Palau,Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Romero,Elpidio,Logística
+274,C002,10,2025-04-22,3,185.52,Ochoa and Sons,Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Serrano,Germán,Soporte Ventas
+275,C013,2,2025-03-10,2,149.54,"Calleja, Márquez and Cañellas",Lasa Ltd,Aurelia Marin Royo,"Designer, industrial/product",Álava,Uganda,Quiroga,Lourdes,Gerente Ventas
+276,C018,1,2023-09-22,1,351.02,Nevado-Díez,Ríos-Villar,Azeneth Huguet Gomila,Bonds trader,Albacete,República Unida de Tanzanía,Navarrete,Guiomar,Marketing
+277,C027,6,2025-05-24,3,411.27,"Sobrino, Tejero and Esparza",Ayllón PLC,Lidia Criado Barberá,Rural practice surveyor,Cádiz,Belarús,Amores,Victoria,Logística
+278,C022,4,2025-05-10,3,240.89,Barroso Ltd,Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Solsona,Zaira,Marketing
+279,C022,3,2025-04-12,1,256.65,Arco-Marcos,Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Dalmau,Priscila,Gerente Ventas
+280,C013,8,2024-01-22,3,232.0,Flores Inc,Lasa Ltd,Aurelia Marin Royo,"Designer, industrial/product",Álava,Uganda,Amores,Celso,Marketing
+281,C028,2,2024-04-20,2,467.62,Villalba-Puig,"Bayo, Gutierrez and Quintanilla",Victor Hoz Ariño,Water quality scientist,La Rioja,Sudán del Sur,Quiroga,Lourdes,Gerente Ventas
+282,C013,7,2025-05-13,3,63.87,"Sáenz, Isern and Arce",Lasa Ltd,Aurelia Marin Royo,"Designer, industrial/product",Álava,Uganda,Prada,Dora,Vendedor
+283,C022,6,2025-03-26,1,299.09,"Feijoo, Macias and Palau",Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Amores,Victoria,Logística
+284,C010,4,2025-06-18,3,383.64,Mármol LLC,Clavero-Landa,Duilio Jódar Romero,Television production assistant,Huesca,Estados Unidos de América,Solsona,Zaira,Marketing
+285,C006,10,2023-11-23,1,433.12,Rueda-Páez,Goñi LLC,Teófilo Guerrero Cabrero,Museum/gallery conservator,Lleida,Sierra Leona,Serrano,Germán,Soporte Ventas
+286,C021,4,2025-03-18,1,178.31,Pomares-Nicolau,Falcón-Busquets,Narciso Rosa Pablo,Pharmacologist,Lleida,Uzbekistán,Solsona,Zaira,Marketing
+287,C022,5,2024-01-11,3,312.88,Valencia-Pedrero,Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Castell,Esther,Logística
+288,C024,6,2025-08-05,2,258.28,"Lasa, Blanch and Rodriguez",Ayuso Ltd,Socorro de Bueno,Fast food restaurant manager,La Rioja,Niger,Amores,Victoria,Logística
+289,C009,2,2023-10-19,3,83.93,Escribano-Marin,Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Quiroga,Lourdes,Gerente Ventas
+290,C007,1,2024-04-24,3,167.28,Bernal LLC,Cánovas-Pellicer,Clementina Lasa Bellido,Transport planner,Murcia,Uzbekistán,Navarrete,Guiomar,Marketing
+291,C001,4,2025-01-13,3,357.87,Medina-Salmerón,"Cantón, Amaya and Llopis",Dani de Calatayud,Sports administrator,Palencia,Maldivas,Solsona,Zaira,Marketing
+292,C002,4,2024-11-29,2,154.29,"Rojas, Diaz and Saldaña",Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Solsona,Zaira,Marketing
+293,C021,6,2024-05-18,1,366.68,Arnal-Osorio,Falcón-Busquets,Narciso Rosa Pablo,Pharmacologist,Lleida,Uzbekistán,Amores,Victoria,Logística
+294,C009,7,2024-12-08,1,282.37,Llobet-Barceló,Leal-Batalla,Yago Miranda,"Engineer, petroleum",La Coruña,Somalia,Prada,Dora,Vendedor
+295,C021,5,2023-10-16,1,117.61,"Ramis, Parra and Vilalta",Falcón-Busquets,Narciso Rosa Pablo,Pharmacologist,Lleida,Uzbekistán,Castell,Esther,Logística
+296,C022,8,2025-05-02,2,144.82,"Cuesta, Anguita and Clavero",Cabello Inc,Pascuala Nicolau Canales,Fish farm manager,Cantabria,Portugal,Amores,Celso,Marketing
+297,C005,9,2025-06-08,1,450.86,"Ríos, Arana and Cases","Segovia, Casanovas and Pinedo",Leoncio Marcos Pardo,Technical brewer,Teruel,Belarús,Romero,Elpidio,Logística
+298,C001,5,2023-10-10,1,147.47,Pazos LLC,"Cantón, Amaya and Llopis",Dani de Calatayud,Sports administrator,Palencia,Maldivas,Castell,Esther,Logística
+299,C020,10,2024-06-11,1,153.42,"Antúnez, Corral and Sandoval","Gárate, Lopez and Torralba",Julián Catalán,"Teacher, English as a foreign language",Ciudad,Namibia,Serrano,Germán,Soporte Ventas
+300,C002,9,2024-06-02,3,388.57,Saldaña-Benítez,Andrés Inc,Demetrio Vazquez,Town planner,Navarra,El Salvador,Romero,Elpidio,Logística
