@@ -1,4 +1,4 @@
-City,Country,UN_2025_pop,City_prop_def,City_proper_pop,City proper[b] Area (km2),City proper[b] Density (/km2),Urban_pop,Urban area[12] Area (km2),Urban area[12] Density (/km2),Metro_pop,Metropolitan area[c] Area (km2),Metropolitan area[c] Density (/km2)
+City,Country Country,UN 2025 population estimates[11] UN 2025 population estimates[11],City proper[b] Definition,City proper[b] Population,City proper[b] Area (km2),City proper[b] Density (/km2),Urban area[12] Population,Urban area[12] Area (km2),Urban area[12] Density (/km2),Metropolitan area[c] Population,Metropolitan area[c] Area (km2),Metropolitan area[c] Density (/km2)
 Jakarta,Indonesia,41913860,Special region,10154134.0,664.0,15292.0,33756000.0,3546.0,9519.0,33430285.0,7063.0,4733.0
 Dhaka,Bangladesh,36585479,Capital city,10295407.0,338.0,30460.0,19134000.0,619.0,30911.0,14543124.0,,
 Tokyo,Japan,33412512,Metropolis prefecture,13515271.0,2191.0,6169.0,37785000.0,8231.0,4591.0,37274000.0,13452.0,2771.0
