@@ -1,0 +1,11 @@
+CIP_ENCRIPTADO,FECHA_NACIMIENTO,FECHA_INGRESO,SEXO,DIAGNOSTICO_1,PROCEDIMIENTO_1,EXTRA_COL_1,EXTRA_COL_2
+A123,15-05-1980,2023-01-10,1,Gripe,Consulta,,basura
+B456,20.10.1992,2023-01-12,2,Fractura,Radiografía,,basura
+A123,15/05/1980,2023-01-10,1,Gripe,Consulta,,basura
+C789,05-12-1975,2023-01-15,2,Control,Examen,,basura
+D012,12.01.1988,2023-01-20,1,Apendicitis,Cirugía,,basura
+B456,20/10/1992,2023-01-12,2,Fractura,Radiografía,,basura
+E345,30-03-1995,2023-01-25,2,Parto,Asistencia,,basura
+A123,15-05-1980,2023-01-10,1,Gripe,Consulta,,basura
+F678,22/07/1983,2023-02-01,1,Asma,Nebulización,,basura
+G901,SIN_DATA,2023-02-05,2,Control,Examen,,basura
