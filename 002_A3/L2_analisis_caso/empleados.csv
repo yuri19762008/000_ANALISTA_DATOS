@@ -1,0 +1,8 @@
+ID,Nombre,Departamento,Salario,Fecha_Ingreso
+1,Juan García,Ventas,45000.00,2022-01-15
+2,María López,TI,52000.00,2021-06-20
+3,Carlos Pérez,Finanzas,48000.00,2022-03-10
+4,Ana Martínez,Ventas,,2020-11-05
+5,Juan García,Ventas,45000.00,2022-01-15
+6,Pedro Rodríguez,TI,51000.00,
+7,Laura Gómez,RRHH,46000.00,2023-02-18
