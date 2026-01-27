@@ -318,16 +318,16 @@ df = df.drop_duplicates()  # Modificar copia
 ##  PRÓXIMOS PASOS
 
 ### Nivel Intermedio
-- [ ] Cargar datos de bases de datos (SQLite, PostgreSQL)
-- [ ] Validación de restricciones de negocio
-- [ ] Manejo de archivos muy grandes (chunking)
-- [ ] Automatización con scheduling
+-  Cargar datos de bases de datos (SQLite, PostgreSQL)
+-  Validación de restricciones de negocio
+-  Manejo de archivos muy grandes (chunking)
+-  Automatización con scheduling
 
 ### Nivel Avanzado
-- [ ] Construcción de pipelines (Luigi, Airflow)
-- [ ] APIs para consumir datos limpios
-- [ ] Monitoreo de calidad en producción
-- [ ] Machine Learning con datos preprocesados
+-  Construcción de pipelines (Luigi, Airflow)
+-  APIs para consumir datos limpios
+-  Monitoreo de calidad en producción
+-  Machine Learning con datos preprocesados
 
 ---
 
