@@ -11,3 +11,10 @@ Gracias al uso de Pandas se logró:
 - Reorganizar y exportar los datos en formatos listos para reportes (CSV y Excel).
 
 En conjunto, este flujo de trabajo asegura que los análisis y reportes financieros se basen en datos confiables, reduciendo errores y facilitando la toma de decisiones estratégicas dentro de la empresa.
+
+
+**para ejecutar el Dashboard no olvidar**
+
+    1. pip install streamlit plotly
+
+    2. streamlit run app.py
