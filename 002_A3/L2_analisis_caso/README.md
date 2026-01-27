@@ -398,7 +398,7 @@ Si tienes dudas sobre el código:
 
 ---
 
-**Documento preparado para:** Análisis de Caso Malkemy  
+**Documento preparado por:** Yuri Urzua Lebuy 
 **Fecha:** Enero 2026   
 **Duración estimada:** 2-4 horas para estudiar y ejecutar  
 
