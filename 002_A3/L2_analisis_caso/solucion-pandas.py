@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+
 """
 ANÁLISIS DE CASO: OBTENCIÓN DE DATOS DESDE ARCHIVOS CON PANDAS
 Solución Completa y Ejecutable
@@ -26,7 +25,7 @@ print("=" * 80)
 print("ANÁLISIS DE CASO: OBTENCIÓN DE DATOS DESDE ARCHIVOS CON PANDAS")
 print("=" * 80)
 
-print("\n✓ Importando librerías necesarias...")
+print("\n Importando librerías necesarias...")
 print("  - pandas: Manipulación de datos")
 print("  - numpy: Operaciones numéricas")
 print("  - StringIO: Simulación de archivos")
@@ -55,13 +54,13 @@ csv_data = """ID,Nombre,Departamento,Salario,Fecha_Ingreso
 7,Laura Gómez,RRHH,46000.00,2023-02-18"""
 
 # Guardar como archivo CSV
-with open('empleados.csv', 'w', encoding='utf-8') as f:
+with open(r'D:\000_ANALISTA DATOS , TALENTO DIGITAL\002_A3\L2_analisis_caso\empleados.csv', 'w',encoding='utf-8') as f:
     f.write(csv_data)
 
 # Cargar el CSV en un DataFrame
-df_csv = pd.read_csv('empleados.csv')
+df_csv = pd.read_csv(r'D:\000_ANALISTA DATOS , TALENTO DIGITAL\002_A3\L2_analisis_caso\empleados.csv')
 
-print("✓ CSV cargado exitosamente")
+print(" CSV cargado exitosamente")
 print(f"  Dimensiones: {df_csv.shape[0]} filas × {df_csv.shape[1]} columnas")
 print("\nPrimeras filas del CSV:")
 print(df_csv.head())
@@ -81,10 +80,10 @@ excel_data = {
 }
 
 df_excel_temp = pd.DataFrame(excel_data)
-df_excel_temp.to_excel('proyectos.xlsx', index=False)
+df_excel_temp.to_excel(r'D:\000_ANALISTA DATOS , TALENTO DIGITAL\002_A3\L2_analisis_caso\proyectos.xlsx', index=False)
 
 # Cargar el archivo Excel
-df_excel = pd.read_excel('proyectos.xlsx')
+df_excel = pd.read_excel(r'D:\000_ANALISTA DATOS , TALENTO DIGITAL\002_A3\L2_analisis_caso\proyectos.xlsx')
 
 print("✓ Excel cargado exitosamente")
 print(f"  Dimensiones: {df_excel.shape[0]} filas × {df_excel.shape[1]} columnas")
@@ -114,7 +113,7 @@ html_table = """
 # Extraer tabla desde HTML
 df_html = pd.read_html(StringIO(html_table))[0]
 
-print("✓ Tabla HTML cargada exitosamente")
+print(" Tabla HTML cargada exitosamente")
 print(f"  Dimensiones: {df_html.shape[0]} filas × {df_html.shape[1]} columnas")
 print("\nContenido de la tabla HTML:")
 print(df_html)
@@ -127,11 +126,11 @@ print("\n" + "=" * 80)
 print("ANÁLISIS INICIAL DE CALIDAD DE DATOS (ANTES DE LIMPIAR)")
 print("=" * 80)
 
-print("\n[📊] RESUMEN DE DATOS ORIGINALES:")
+print("\nRESUMEN DE DATOS ORIGINALES:")
 print(f"\n  Total de filas: {len(df_csv)}")
 print(f"  Total de columnas: {len(df_csv.columns)}")
 
-print("\n[❌] PROBLEMAS IDENTIFICADOS:")
+print("\n PROBLEMAS IDENTIFICADOS:")
 
 # Valores nulos
 print("\n  1. VALORES NULOS:")
@@ -295,7 +294,7 @@ df_limpio = df_limpio.sort_values(
 
 print("  ✓ Datos ordenados exitosamente")
 
-print("\n📊 DATOS DESPUÉS DE TRANSFORMACIÓN:")
+print("\n DATOS DESPUÉS DE TRANSFORMACIÓN:")
 print(df_limpio)
 
 # ─────────────────────────────────────────────────────────────────────────
@@ -337,7 +336,7 @@ print("=" * 80)
 
 print("\n[4.1] Exportando a CSV...")
 
-csv_path = 'empleados_limpios.csv'
+csv_path = r'D:\000_ANALISTA DATOS , TALENTO DIGITAL\002_A3\L2_analisis_caso\empleados_limpiados.csv'
 df_limpio.to_csv(csv_path, index=False, encoding='utf-8')
 
 print(f"  ✓ Archivo creado: {csv_path}")
@@ -355,7 +354,7 @@ print(df_verificacion.head(3))
 
 print("\n[4.2] Exportando a Excel con múltiples hojas...")
 
-excel_path = 'empleados_analisis_completo.xlsx'
+excel_path = r'D:\000_ANALISTA DATOS , TALENTO DIGITAL\002_A3\L2_analisis_caso\empleados_analisis_completo.xlsx'
 
 with pd.ExcelWriter(excel_path, engine='openpyxl') as writer:
     # Hoja 1: Datos limpios
@@ -396,7 +395,7 @@ print(f"  Filas duplicadas: {df_limpio.duplicated().sum()}")
 print(f"  Tipos de datos validados: ✓")
 print(f"\n{df_limpio}")
 
-print("\n[📈] MEJORAS ALCANZADAS:")
+print("\n MEJORAS ALCANZADAS:")
 reduccion_filas = ((len(df_csv) - len(df_limpio)) / len(df_csv) * 100)
 completitud = ((df_limpio.isnull().sum().sum() == 0) * 100)
 print(f"  ✓ Reducción de filas (duplicadas): {reduccion_filas:.1f}%")
@@ -427,7 +426,7 @@ flujo = """
 │  ✓ Detectar filas duplicadas (1)                             │
 │  ✓ Validar tipos de datos (5 columnas)                       │
 │  ✓ Revisar estructura y formato                              │
-│  Problemas detectados: 3                                      │
+│  Problemas detectados: 3                                     │
 └────────────┬─────────────────────────────────────────────────┘
              │
 ┌────────────▼─────────────────────────────────────────────────┐
@@ -436,7 +435,7 @@ flujo = """
 │  ✓ Imputar salario con promedio por departamento             │
 │  ✓ Eliminar fila con fecha_ingreso nula                      │
 │  ✓ Convertir tipos de datos correctamente                    │
-│  Datos nulos eliminados: 3                                    │
+│  Datos nulos eliminados: 3                                   │
 └────────────┬─────────────────────────────────────────────────┘
              │
 ┌────────────▼─────────────────────────────────────────────────┐
@@ -454,7 +453,7 @@ flujo = """
 │  ✓ Crear Excel con múltiples hojas                           │
 │  ✓ Generar resúmenes analíticos                              │
 │  ✓ Validar integridad de archivos                            │
-│  Archivos generados: 2                                        │
+│  Archivos generados: 2                                       │
 └──────────────────────────────────────────────────────────────┘
 """
 
@@ -532,8 +531,8 @@ print("\n" + "=" * 80)
 print("FIN DEL ANÁLISIS DE CASO")
 print("=" * 80)
 
-print("\n✓ Proceso completado exitosamente")
-print(f"✓ Archivos generados:")
+print("\n Proceso completado exitosamente")
+print(f" Archivos generados:")
 print(f"  - empleados.csv")
 print(f"  - proyectos.xlsx")
 print(f"  - empleados_limpios.csv (limpiado)")
