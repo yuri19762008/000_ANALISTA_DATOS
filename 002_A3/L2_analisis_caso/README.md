@@ -8,7 +8,7 @@
 ### 2. **Paso 2 instale dependencias con**  " pip install -r requirements.txt " 
 ### 3. **Ejecute solucion-pandas.py , si tiene errores verifique rutas**
 ### 4. **Adicional si ejecute el dashboard**  " streamlit run app.py "
-### 5. **Si desea agregue mail luego deberia abrir navegador en http://localhost:8501**
+### 5. **Si desea agregue mail, luego deberia abrir navegador en http://localhost:8501**
 
 ---
 
