@@ -115,6 +115,7 @@ import pandas as pd
 import numpy as np
 
 # Leer diferentes formatos
+# no olvidar cambiar rutas 
 df_csv = pd.read_csv('archivo.csv')
 df_excel = pd.read_excel('archivo.xlsx')
 df_html = pd.read_html('url')[0]  # Tabla web
@@ -164,6 +165,7 @@ df.groupby('grupo').agg({'col': 'sum'})
 ### Exportación
 ```python
 # Guardar
+# no olvidar cambiar rutas 
 df.to_csv('archivo.csv', index=False)
 df.to_excel('archivo.xlsx', index=False)
 
@@ -406,4 +408,4 @@ Si tienes dudas sobre el código:
 **Nivel:** Intermedio-Avanzado  
 **Duración estimada:** 2-4 horas para estudiar y ejecutar  
 
-¡Mucho éxito con tu análisis! 🎉
+
