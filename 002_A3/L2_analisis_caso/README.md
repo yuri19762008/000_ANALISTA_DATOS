@@ -3,23 +3,18 @@
 
 ---
 
-## 📋 CONTENIDO GENERAL
+##  CONTENIDO GENERAL
 
-He desarrollado **tres documentos complementarios** para tu caso de análisis:
+He desarrollado **dos documentos complementarios** para tu caso de análisis:
 
-### 1. **Documento Teórico-Práctico** (caso-analisis-pandas.md)
-   - Explicación conceptual de cada paso
-   - Código con comentarios detallados
-   - Salidas esperadas después de cada operación
-   - Mejores prácticas y justificaciones técnicas
 
-### 2. **Script Ejecutable Completo** (solucion-pandas.py)
+### 1. **Script Ejecutable Completo** (solucion-pandas.py)
    - Código completamente funcional y listo para ejecutar
    - 10 secciones organizadas y documentadas
    - Genera archivos de salida reales
    - Puedes copiarlo y ejecutar directamente en Jupyter o terminal
 
-### 3. **Esta Guía Rápida** (README)
+### 2. **Esta Guía Rápida** (README)
    - Resumen de conceptos clave
    - Flujo del proceso
    - Comandos esenciales
@@ -27,7 +22,7 @@ He desarrollado **tres documentos complementarios** para tu caso de análisis:
 
 ---
 
-## 🎯 PROPÓSITO DEL CASO
+##  PROPÓSITO DEL CASO
 
 **Contexto:** Una empresa de consultoría recibe datos de múltiples fuentes (CSV, Excel, web) con:
 - Valores nulos (missing data)
@@ -39,7 +34,7 @@ He desarrollado **tres documentos complementarios** para tu caso de análisis:
 
 ---
 
-## 📊 DATOS DE EJEMPLO
+##  DATOS DE EJEMPLO
 
 ### Datos Originales (7 filas)
 ```
@@ -71,14 +66,14 @@ ID | Nombre           | Departamento | Salario   | Fecha_Ingreso
 ```
 
 **Mejoras:**
-- ✓ Sin duplicados
-- ✓ Sin valores nulos
-- ✓ Tipos validados
-- ✓ Datos ordenados por salario
+-  Sin duplicados
+-  Sin valores nulos
+-  Tipos validados
+-  Datos ordenados por salario
 
 ---
 
-## 🔄 FLUJO DEL PROCESO
+##  FLUJO DEL PROCESO
 
 ```
 ┌─────────────────────────────────────┐
@@ -107,7 +102,7 @@ ID | Nombre           | Departamento | Salario   | Fecha_Ingreso
 
 ---
 
-## 💻 COMANDOS ESENCIALES
+##  COMANDOS ESENCIALES
 
 ### Importación
 ```python
@@ -177,7 +172,7 @@ with pd.ExcelWriter('archivo.xlsx') as writer:
 
 ---
 
-## 📌 CONCEPTOS CLAVE
+##  CONCEPTOS CLAVE
 
 ### 1. DataFrame
 Estructura de datos tabular de Pandas (filas × columnas)
@@ -243,7 +238,7 @@ df['salario_mensual'] = df['salario_anual'] / 12
 
 ---
 
-## 🔍 PREGUNTAS FRECUENTES
+##  PREGUNTAS FRECUENTES
 
 **P: ¿Por qué no eliminar todos los valores nulos?**
 R: Podrías perder datos importantes. Estrategia mejor:
@@ -282,7 +277,7 @@ df = df.drop_duplicates()  # Modificar copia
 
 ---
 
-## 📈 IMPACTO DEL CASO
+##  IMPACTO DEL CASO
 
 | Métrica | Antes | Después | Mejora |
 |---------|-------|---------|--------|
@@ -294,7 +289,7 @@ df = df.drop_duplicates()  # Modificar copia
 
 ---
 
-## 🎓 APRENDIZAJES CLAVE
+##  APRENDIZAJES CLAVE
 
 1. **Proceso > Herramienta**
    - No es solo ejecutar código, es entender problemas
@@ -320,7 +315,7 @@ df = df.drop_duplicates()  # Modificar copia
 
 ---
 
-## 🚀 PRÓXIMOS PASOS
+##  PRÓXIMOS PASOS
 
 ### Nivel Intermedio
 - [ ] Cargar datos de bases de datos (SQLite, PostgreSQL)
@@ -336,7 +331,7 @@ df = df.drop_duplicates()  # Modificar copia
 
 ---
 
-## 📚 RECURSOS RECOMENDADOS
+##  RECURSOS RECOMENDADOS
 
 **Documentación:**
 - Pandas Official: https://pandas.pydata.org/
@@ -353,7 +348,7 @@ df = df.drop_duplicates()  # Modificar copia
 
 ---
 
-## ✅ CHECKLIST PARA TU ENTREGA
+##  CHECKLIST PARA TU ENTREGA
 
 Para completar correctamente el caso, asegúrate de:
 
@@ -391,7 +386,7 @@ Para completar correctamente el caso, asegúrate de:
 
 ---
 
-## 📞 SOPORTE
+##  SOPORTE
 
 Si tienes dudas sobre el código:
 
@@ -404,8 +399,7 @@ Si tienes dudas sobre el código:
 ---
 
 **Documento preparado para:** Análisis de Caso Malkemy  
-**Fecha:** Enero 2026  
-**Nivel:** Intermedio-Avanzado  
+**Fecha:** Enero 2026   
 **Duración estimada:** 2-4 horas para estudiar y ejecutar  
 
 

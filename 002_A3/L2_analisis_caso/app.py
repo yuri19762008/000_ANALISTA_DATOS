@@ -9,7 +9,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("📊 Dashboard de Empleados - Pandas + Streamlit")
+st.title(" Dashboard de Empleados - Pandas + Streamlit")
 st.markdown("Dashboard local basado en los datos limpiados del caso de obtención de datos desde archivos.")
 
 # ------------------ CARGA DE DATOS ------------------ #
