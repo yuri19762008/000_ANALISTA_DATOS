@@ -7,7 +7,7 @@ Empresa: Consultoría de Datos
 Objetivo: Automatizar obtención, limpieza y exportación de datos desde múltiples fuentes
 Herramienta: Python con Pandas
 
-Autor: Analista de Datos
+Autor: Yuri Urzua Lebuy
 Fecha: Enero 2026
 """
 
