@@ -97,19 +97,19 @@ cd proyecto
 
         pip list
 
-        
+
 5. Ejecutar el flujo principal (script .py)
-Asegúrate de que clientes_ecommerce.csv y clientes_ecommerce.xlsx estén en la misma carpeta que proyecto_modulo4.py.
 
-En la terminal:
+    - Asegúrate de que clientes_ecommerce.csv y clientes_ecommerce.xlsx estén en la misma carpeta que proyecto.
 
-bash
-python proyecto_modulo4.py
-Al finalizar, se habrán generado varios archivos intermedios y el dataset final:
+    En la terminal:
 
-dataset_final.csv
+        python datos.py
 
-dataset_final.xlsx
+    - Al finalizar, se habrán generado varios archivos intermedios y el dataset final:
+
+            dataset_final.csv
+            dataset_final.xlsx
 
 6. Ejecutar el notebook (.ipynb) [opcional]
 Instala Jupyter si aún no lo tienes:
