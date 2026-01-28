@@ -63,7 +63,7 @@ proyecto/
 ## Si usas Git:
 
 bash
-git clone <URL_DEL_REPOSITORIO>
+git clone <https://github.com/yuri19762008/000_ANALISTA-DATOS---TALENTO-DIGITAL/tree/master/002_A3/PROYECTO>
 cd proyecto
 
 
