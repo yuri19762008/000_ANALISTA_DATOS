@@ -67,7 +67,7 @@ git clone <URL_DEL_REPOSITORIO>
 cd proyecto
 
 
-3. Crear y activar un entorno virtual
+## 3. Crear y activar un entorno virtual
     - Windows (PowerShell o CMD)
 
         python -m venv .venv
@@ -79,7 +79,7 @@ cd proyecto
         source .venv/bin/activate
 
 
-4. Instalar dependencias
+## 4. Instalar dependencias
     - Con el entorno virtual activo, en la carpeta del proyecto:
 
 
@@ -98,7 +98,7 @@ cd proyecto
             pip list
 
 
-5. Ejecutar el flujo principal (datos.py)
+## 5. Ejecutar el flujo principal (datos.py)
 
     - Asegúrate de que clientes_ecommerce.csv y clientes_ecommerce.xlsx estén en la misma carpeta que proyecto.
 
@@ -111,7 +111,7 @@ cd proyecto
             dataset_final.csv
             dataset_final.xlsx
 
-6. Ejecutar el notebook (datos.ipynb) [opcional]
+## 6. Ejecutar el notebook (datos.ipynb) [opcional]
 
     - Instala Jupyter si aún no lo tienes:
 
@@ -124,7 +124,7 @@ cd proyecto
 
     - Abre datos.ipynb desde el navegador y ejecuta las celdas en orden.
 
-7. Ejecutar el dashboard con Streamlit [opcional]
+## 7. Ejecutar el dashboard con Streamlit [opcional]
 
     - Si tu proyecto incluye dashboard.py y ya generaste dataset_final.csv:
 
