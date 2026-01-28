@@ -95,10 +95,10 @@ cd proyecto
     - Si quieres verificar versiones:
 
 
-        pip list
+            pip list
 
 
-5. Ejecutar el flujo principal (script .py)
+5. Ejecutar el flujo principal (datos.py)
 
     - Asegúrate de que clientes_ecommerce.csv y clientes_ecommerce.xlsx estén en la misma carpeta que proyecto.
 
@@ -111,23 +111,26 @@ cd proyecto
             dataset_final.csv
             dataset_final.xlsx
 
-6. Ejecutar el notebook (.ipynb) [opcional]
-Instala Jupyter si aún no lo tienes:
+6. Ejecutar el notebook (datos.ipynb) [opcional]
 
-bash
-pip install jupyter
-Lanza Jupyter:
+    - Instala Jupyter si aún no lo tienes:
 
-bash
-jupyter notebook
-Abre proyecto_modulo4.ipynb desde el navegador y ejecuta las celdas en orden (Lección 1 a 6).
+            pip install jupyter
+
+    - Lanza Jupyter:
+
+            jupyter notebook
+
+
+    - Abre datos.ipynb desde el navegador y ejecuta las celdas en orden.
 
 7. Ejecutar el dashboard con Streamlit [opcional]
-Si tu proyecto incluye dashboard.py y ya generaste dataset_final.csv:
 
-bash
-streamlit run dashboard.py
-Esto abrirá (o mostrará) una URL del tipo:
+    - Si tu proyecto incluye dashboard.py y ya generaste dataset_final.csv:
+
+            streamlit run dashboard.py
+
+    - Esto abrirá (o mostrará) una URL del tipo:
 
 text
 http://localhost:8501
