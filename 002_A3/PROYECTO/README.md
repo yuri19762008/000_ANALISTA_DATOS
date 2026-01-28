@@ -68,14 +68,15 @@ cd proyecto
 
 
 3. Crear y activar un entorno virtual
-- Windows (PowerShell o CMD)
+    - Windows (PowerShell o CMD)
 
-    python -m venv .venv
-    .venv\Scripts\activate
-- Linux / macOS
+        python -m venv .venv
+        .venv\Scripts\activate
 
-    python -m venv .venv
-    source .venv/bin/activate
+    - Linux / macOS
+
+        python -m venv .venv
+        source .venv/bin/activate
 
 
 4. Instalar dependencias
