@@ -51,7 +51,7 @@ proyecto_modulo4/
 
 Coloca todos los archivos del proyecto en una carpeta, por ejemplo:
 
-
+```
 proyecto/
     datos.py
     datos.ipynb
@@ -59,7 +59,7 @@ proyecto/
     requirements.txt
     clientes_ecommerce.csv
     clientes_ecommerce.xlsx
-
+```
 ## Si usas Git:
 
 bash
