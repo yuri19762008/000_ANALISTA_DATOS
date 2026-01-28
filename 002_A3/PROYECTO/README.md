@@ -92,10 +92,12 @@ cd proyecto
             requests
             streamlit (si está incluido para el dashboard)
 
-Si quieres verificar versiones:
+    - Si quieres verificar versiones:
 
-bash
-pip list
+
+        pip list
+
+        
 5. Ejecutar el flujo principal (script .py)
 Asegúrate de que clientes_ecommerce.csv y clientes_ecommerce.xlsx estén en la misma carpeta que proyecto_modulo4.py.
 
