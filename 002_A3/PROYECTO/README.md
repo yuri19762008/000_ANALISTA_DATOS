@@ -80,21 +80,17 @@ cd proyecto
 
 
 4. Instalar dependencias
-Con el entorno virtual activo, en la carpeta del proyecto:
+    - Con el entorno virtual activo, en la carpeta del proyecto:
 
-bash
-pip install -r requirements.txt
-Esto instalará, entre otros:
 
-numpy
+        pip install -r requirements.txt
+        Esto instalará, entre otros:
 
-pandas
-
-lxml
-
-requests
-
-streamlit (si está incluido para el dashboard)
+            numpy
+            pandas
+            lxml
+            requests
+            streamlit (si está incluido para el dashboard)
 
 Si quieres verificar versiones:
 
