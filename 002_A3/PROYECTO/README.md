@@ -34,11 +34,11 @@ proyecto_modulo4/
 ├─ dataset_wrangle.csv
 ├─ dataset_final.csv
 └─ dataset_final.xlsx
+```
 
 ---
-
-
-# Instrucciones de instalación y ejecución
+## Instrucciones de instalación y ejecución
+---
 
 ## 1. Requisitos previos
 
@@ -46,35 +46,37 @@ proyecto_modulo4/
 - Acceso a una terminal (CMD, PowerShell, Terminal en Linux/macOS).
 - Git (opcional, solo si vas a clonar desde un repositorio).
 
----
 
 ## 2. Clonar o copiar el proyecto
 
 Coloca todos los archivos del proyecto en una carpeta, por ejemplo:
 
-```text
-proyecto_modulo4/
-    proyecto_modulo4.py
-    proyecto_modulo4.ipynb
+
+proyecto/
+    datos.py
+    datos.ipynb
     dashboard.py                # si usas Streamlit
     requirements.txt
     clientes_ecommerce.csv
     clientes_ecommerce.xlsx
-Si usas Git:
+
+## Si usas Git:
 
 bash
 git clone <URL_DEL_REPOSITORIO>
-cd proyecto_modulo4
+cd proyecto
+
+
 3. Crear y activar un entorno virtual
-Windows (PowerShell o CMD)
-bash
-python -m venv .venv
-.venv\Scripts\activate
-Linux / macOS
-bash
-python -m venv .venv
-source .venv/bin/activate
-Verás el nombre del entorno (por ejemplo, .venv) al inicio de la línea de la terminal.
+- Windows (PowerShell o CMD)
+
+    python -m venv .venv
+    .venv\Scripts\activate
+- Linux / macOS
+
+    python -m venv .venv
+    source .venv/bin/activate
+
 
 4. Instalar dependencias
 Con el entorno virtual activo, en la carpeta del proyecto:
