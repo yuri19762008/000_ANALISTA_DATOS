@@ -132,19 +132,10 @@ cd proyecto
 
     - Esto abrirá (o mostrará) una URL del tipo:
 
-text
-http://localhost:8501
-Ábrela en el navegador para interactuar con el dashboard.
+            http://localhost:8501
 
-8. Desactivar el entorno virtual
-Cuando termines de trabajar:
+    - Ábrela en el navegador para interactuar con el dashboard.
 
-bash
-deactivate
-Esto te devuelve al Python global del sistema.
-
-text
-undefined
 
 ---
 
