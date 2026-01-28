@@ -102,9 +102,9 @@ cd proyecto
 
     - Asegúrate de que clientes_ecommerce.csv y clientes_ecommerce.xlsx estén en la misma carpeta que proyecto.
 
-    En la terminal:
+        En la terminal:
 
-        python datos.py
+            python datos.py
 
     - Al finalizar, se habrán generado varios archivos intermedios y el dataset final:
 
