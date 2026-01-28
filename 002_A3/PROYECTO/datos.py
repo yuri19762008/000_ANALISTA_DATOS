@@ -1,5 +1,5 @@
 """
-Proyecto Módulo 4 - Preparación de datos con Python
+Proyecto Módulo 3 - Preparación de datos con Python
 Flujo completo: NumPy + Pandas + obtención, limpieza, wrangling y agrupamiento.
 ### VERIFICAR O MODIFICAR RUTAS DE GUARDADO EN EL CODIGO ###
 """
