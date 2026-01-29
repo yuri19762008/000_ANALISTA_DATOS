@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 1. Ejecutar el análisis EDA
 
-    python src/main.py
+    python PROYECTO/main.py
 
 2. Ejecutar el dashboard (Streamlit)
 
