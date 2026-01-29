@@ -13,7 +13,7 @@ El resultado final incluye:
 - Opcionalmente, un dashboard en Streamlit (`dashboard.py`) para explorar los datos.
 
 ---
-
+### VERIFICAR RUTAS DE LECTURA Y GUARDADO
 ## Estructura sugerida del proyecto
 
 ```text
