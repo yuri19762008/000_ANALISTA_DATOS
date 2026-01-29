@@ -20,16 +20,13 @@ pip install -r requirements.txt
 
 ```
 
-Uso
+## Uso
+
 1. Ejecutar el análisis EDA
 
-```
-
-python src/main.py
+    python src/main.py
 
 2. Ejecutar el dashboard (Streamlit)
 
-```
-
-cd PROYECTO
-streamlit run app.py
+    cd PROYECTO
+    3. streamlit run app.py
