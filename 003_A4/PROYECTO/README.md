@@ -28,5 +28,4 @@ pip install -r requirements.txt
 
 2. Ejecutar el dashboard (Streamlit)
 
-    cd PROYECTO
-    streamlit run app.py
+    cd PROYECTO/ streamlit run app.py
