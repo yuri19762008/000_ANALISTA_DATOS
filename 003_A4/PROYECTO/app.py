@@ -59,9 +59,11 @@ st.title("Dashboard EDA ComercioYA")
 st.caption("Basado en ecommerce_sales_data-2.csv - Ventas, cantidad y ganancia por producto, categoría y región.")
 st.caption("Desarrollado por: Yuri Urzua Lebuy - Analista de Datos")
 
+
 # Tabs para organizar todo
+st.subheader("SELECCION DE ETIQUETAS Y GRAFICOS")
 tab_resumen, tab_tablas, tab_graficos1, tab_graficos2 = st.tabs(
-    ["Resumen", "Tablas", "Gráficos EDA", "Gráficos avanzados"]
+    ["RESUMEN", "TABLAS", "GRAFICOS EDA", "GRAFICOS AVANZADOS"]
 )
 
 # =====================================================
@@ -141,37 +143,37 @@ with tab_graficos1:
 
     # Histograma de Sales
     with col_g1:
-        st.markdown("##### Histograma de Sales")
+        st.markdown("##### Histograma de Ventas (Sales)")
         fig, ax = plt.subplots(figsize=(5, 4))
         sns.histplot(df_f["Sales"], bins=30, kde=True, ax=ax)
-        ax.set_title("Histograma de Sales")
+        ax.set_title("Histograma de Ventas (Sales)")
         st.pyplot(fig)
 
     # Histograma de Profit
     with col_g2:
-        st.markdown("##### Histograma de Profit")
+        st.markdown("##### Histograma de Ganancia (Profit)")
         fig, ax = plt.subplots(figsize=(5, 4))
         sns.histplot(df_f["Profit"], bins=30, kde=True, ax=ax)
-        ax.set_title("Histograma de Profit")
+        ax.set_title("Histograma de Ganancia (Profit)")
         st.pyplot(fig)
 
     col_g3, col_g4 = st.columns(2)
 
     # Boxplot Sales por Category
     with col_g3:
-        st.markdown("##### Sales por Category")
+        st.markdown("##### Ventas (Sales) por Categoría")
         fig, ax = plt.subplots(figsize=(5, 4))
         sns.boxplot(data=df_f, x="Category", y="Sales", ax=ax)
-        ax.set_title("Sales por Category")
-        ax.tick_params(axis="x", rotation=30)
+        ax.set_title("Ventas (Sales) por Categoría")
+        ax.tick_params(axis="x")
         st.pyplot(fig)
 
     # Boxplot Profit por Region
     with col_g4:
-        st.markdown("##### Profit por Region")
+        st.markdown("##### Ganancia (Profit) por Región")
         fig, ax = plt.subplots(figsize=(5, 4))
         sns.boxplot(data=df_f, x="Region", y="Profit", ax=ax)
-        ax.set_title("Profit por Region")
+        ax.set_title("Ganancia (Profit) por Región")
         st.pyplot(fig)
 
     st.markdown("##### Matriz de correlación (Quantity, Sales, Profit)")
@@ -191,7 +193,7 @@ with tab_graficos2:
 
     # Scatter Sales vs Profit
     with col_a1:
-        st.markdown("##### Sales vs Profit por categoría")
+        st.markdown("##### Ventas (Sales) vs Ganancia (Profit) por categoría")
         fig, ax = plt.subplots(figsize=(5, 4))
         sns.scatterplot(
             data=df_f,
@@ -206,7 +208,7 @@ with tab_graficos2:
 
     # Scatter Quantity vs Profit
     with col_a2:
-        st.markdown("##### Quantity vs Profit por región")
+        st.markdown("##### Cantidad (Quantity) vs Ganancia (Profit) por región")
         fig, ax = plt.subplots(figsize=(5, 4))
         sns.scatterplot(
             data=df_f,
@@ -219,7 +221,7 @@ with tab_graficos2:
         ax.set_title("Quantity vs Profit")
         st.pyplot(fig)
 
-    st.markdown("##### Sales totales por año y categoría")
+    st.markdown("##### Ventas (Sales) totales por año y categoría")
     sales_year_cat = (
         df_f.groupby(["Year", "Category"])["Sales"]
         .sum()
@@ -227,10 +229,10 @@ with tab_graficos2:
     )
     fig, ax = plt.subplots(figsize=(7, 4))
     sns.barplot(data=sales_year_cat, x="Year", y="Sales", hue="Category", ax=ax)
-    ax.set_title("Sales totales por año y categoría")
+    ax.set_title("Ventas (Sales) totales por año y categoría")
     st.pyplot(fig)
 
-    st.markdown("##### Pairplot (Sales, Profit, Quantity)")
+    st.markdown("##### Pairplot (Ventas, Ganancia, Cantidad)")
     # Para no explotar el navegador, limitamos a una muestra si hay muchos registros
     sample = df_f[["Sales", "Profit", "Quantity"]]
     if len(sample) > 300:

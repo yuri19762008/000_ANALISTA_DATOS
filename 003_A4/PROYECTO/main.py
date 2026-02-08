@@ -177,6 +177,7 @@ def main():
     # LECCIÓN 5: ANÁLISIS VISUAL CON SEABORN
     # -------------------------------------------------------------------------
     print("\n=== LECCIÓN 5: Análisis visual con Seaborn ===\n")
+    print("\n=== LECCIÓN 5: El Analisis completo fue generado y almacenado ===\n")
 
     # Pairplot
     sns.pairplot(df[["Sales", "Profit", "Quantity"]])
