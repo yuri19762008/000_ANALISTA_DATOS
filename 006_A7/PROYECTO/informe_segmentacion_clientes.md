@@ -118,6 +118,8 @@ Ejemplos de posibles segmentos (según promedio de variables por clúster):
 - **Segmentos jóvenes/nuevos**: estrategias de onboarding, campañas de activación, recomendaciones personalizadas.
 - **Outliers detectados por DBSCAN**: análisis individual para detectar oportunidades o riesgos.
 
+
+
 ## 6. Conclusiones y trabajo futuro
 
 ### 6.1 Conclusiones
