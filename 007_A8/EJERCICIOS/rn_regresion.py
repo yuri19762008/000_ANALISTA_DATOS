@@ -6,7 +6,7 @@ from sklearn.preprocessing import StandardScaler
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-from tensorflow.keras import Input
+
 
 import matplotlib.pyplot as plt
 
