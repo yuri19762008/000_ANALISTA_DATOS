@@ -13,6 +13,7 @@ Pasos:
 7) Visualización de soporte/confianza/lift
 """
 
+import os
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -25,44 +26,34 @@ from scipy.cluster.hierarchy import dendrogram, linkage
 from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori, association_rules
 
-
+# Carpeta donde se guardarán las figuras (ruta absoluta)
+BASE_DIR = r"D:\000_ANALISTA DATOS , TALENTO DIGITAL\Bootcamp-main\Modulo7\Leccion1"
+FIG_DIR = os.path.join(BASE_DIR, "figures")
+os.makedirs(FIG_DIR, exist_ok=True)
 
 
 # ==============================
 # 1) Carga y preparación de datos
 # ==============================
 
-def cargar_y_preparar_datos(file_path:  str, country: str = "United Kingdom"):
-    """Carga el CSV de retail, limpia datos y construye features por cliente.
-
-    Parameters
-    ----------
-    file_path : str
-        Ruta al archivo CSV de Online Retail / Online Retail II.
-    country : str
-        País a filtrar para el análisis.
-
-    Returns
-    -------
-    df : DataFrame
-        Datos de detalle (línea de factura) limpios.
-    customer_df : DataFrame
-        Datos agregados por cliente con variables numéricas.
-    X : ndarray
-        Matriz estandarizada para clustering.
-    """
+def cargar_y_preparar_datos(file_path: str, country: str = "United Kingdom"):
+    """Carga el CSV de retail, limpia datos y construye features por cliente."""
     df = pd.read_csv(file_path, encoding="ISO-8859-1")
     print("Shape original:", df.shape)
 
+    # 1.2 Limpieza básica
     df = df.dropna(subset=["Description", "Customer ID"])
     df = df[~df["Invoice"].astype(str).str.startswith("C")]
     print("Shape tras limpiar nulos y devoluciones:", df.shape)
 
+    # 1.3 Filtro por país
     df = df[df["Country"] == country]
     print(f"Shape tras filtrar país ({country}):", df.shape)
 
+    # 1.4 Total por línea
     df["TotalPrice"] = df["Quantity"] * df["Price"]
 
+    # 1.5 Agregado por cliente
     customer_df = (
         df.groupby("Customer ID")
           .agg(
@@ -74,18 +65,22 @@ def cargar_y_preparar_datos(file_path:  str, country: str = "United Kingdom"):
     )
     print("Clientes únicos:", customer_df.shape[0])
 
-    print(customer_df.dtypes)
-
+    # Aseguramos tipos numéricos puros
     for col in ["NumInvoices", "NumItems", "TotalSpent"]:
         customer_df[col] = (
-        customer_df[col]
-        .astype(str)
-        .str.replace(",", ".", regex=False)  # si usara coma decimal
-        .astype(float)
-    )
+            customer_df[col]
+            .astype(str)
+            .str.replace(",", ".", regex=False)
+        )
+        customer_df[col] = pd.to_numeric(customer_df[col], errors="coerce")
 
+    before = customer_df.shape[0]
+    customer_df = customer_df.dropna(subset=["NumInvoices", "NumItems", "TotalSpent"])
+    after = customer_df.shape[0]
+    if before != after:
+        print(f"Filas eliminadas por valores no numéricos: {before - after}")
 
-    
+    # 1.6 Estandarización
     features = ["NumInvoices", "NumItems", "TotalSpent"]
     scaler = StandardScaler()
     X = scaler.fit_transform(customer_df[features])
@@ -111,6 +106,8 @@ def aplicar_dbscan(X, customer_df, eps: float = 0.8, min_samples: int = 10):
     plt.xlabel("Puntos ordenados")
     plt.title("Curva k-dist para seleccionar eps")
     plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(os.path.join(FIG_DIR, "01_dbscan_kdist.png"), dpi=150)
     plt.show()
 
     dbscan = DBSCAN(eps=eps, min_samples=min_samples)
@@ -133,7 +130,17 @@ def aplicar_dbscan(X, customer_df, eps: float = 0.8, min_samples: int = 10):
 # ==================================
 
 def visualizar_tsne(X, labels, title: str = "Clientes con t-SNE y DBSCAN"):
-    tsne = TSNE(n_components=2, random_state=42, perplexity=30)
+    n_samples = X.shape[0]
+
+    # perplexity debe ser < n_samples; usamos un valor adaptativo
+    if n_samples <= 10:
+        perplexity = max(2, n_samples // 2)
+    else:
+        perplexity = min(30, n_samples // 2)
+
+    print(f"n_samples = {n_samples}, usando perplexity = {perplexity}")
+
+    tsne = TSNE(n_components=2, random_state=42, perplexity=perplexity)
     X_tsne = tsne.fit_transform(X)
 
     plt.figure(figsize=(7, 6))
@@ -142,7 +149,7 @@ def visualizar_tsne(X, labels, title: str = "Clientes con t-SNE y DBSCAN"):
         X_tsne[:, 1],
         c=labels,
         cmap="tab10",
-        s=15,
+        s=40,
         alpha=0.8,
     )
     plt.colorbar(scatter, label="Cluster")
@@ -150,6 +157,8 @@ def visualizar_tsne(X, labels, title: str = "Clientes con t-SNE y DBSCAN"):
     plt.xlabel("t-SNE 1")
     plt.ylabel("t-SNE 2")
     plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(os.path.join(FIG_DIR, "02_tsne_dbscan.png"), dpi=150)
     plt.show()
 
 
@@ -177,6 +186,8 @@ def clustering_jerarquico(X, customer_df, n_clusters: int = 4, sample_size: int 
     plt.title("Dendrograma truncado (ward)")
     plt.xlabel("Clusters")
     plt.ylabel("Distancia")
+    plt.tight_layout()
+    plt.savefig(os.path.join(FIG_DIR, "03_dendrograma.png"), dpi=150)
     plt.show()
 
     agg = AgglomerativeClustering(n_clusters=n_clusters, linkage="ward")
@@ -228,11 +239,13 @@ def aplicar_apriori(transactions, min_support: float = 0.02):
 # 6) Reglas de asociación y filtrado
 # ======================================
 
-def generar_y_filtrar_reglas(frequent_itemsets,
-                             min_confidence: float = 0.3,
-                             support_threshold: float = 0.02,
-                             confidence_threshold: float = 0.4,
-                             lift_threshold: float = 1.2):
+def generar_y_filtrar_reglas(
+    frequent_itemsets,
+    min_confidence: float = 0.3,
+    support_threshold: float = 0.02,
+    confidence_threshold: float = 0.4,
+    lift_threshold: float = 1.2,
+):
     rules = association_rules(
         frequent_itemsets,
         metric="confidence",
@@ -273,6 +286,8 @@ def visualizar_reglas(rules_filtered):
     plt.ylabel("Confianza")
     plt.title("Reglas de asociación: soporte vs confianza (color = lift)")
     plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(os.path.join(FIG_DIR, "04_reglas_scatter.png"), dpi=150)
     plt.show()
 
 
@@ -283,21 +298,28 @@ def visualizar_reglas(rules_filtered):
 if __name__ == "__main__":
     # 1) Carga y preparación
     file_path = r"D:\000_ANALISTA DATOS , TALENTO DIGITAL\Bootcamp-main\Modulo7\Leccion1\online_retail_II.csv"
-    # ajusta la ruta a tu CSV
     df, customer_df, X = cargar_y_preparar_datos(file_path)
 
     # 2) DBSCAN
-    labels_dbscan, customer_df = aplicar_dbscan(X, customer_df, eps=0.8, min_samples=10)
+    labels_dbscan, customer_df = aplicar_dbscan(
+        X, customer_df, eps=0.8, min_samples=10
+    )
 
     # 3) t-SNE
-    visualizar_tsne(X, labels_dbscan, title="Clientes con t-SNE coloreados por DBSCAN")
+    visualizar_tsne(
+        X, labels_dbscan, title="Clientes con t-SNE coloreados por DBSCAN"
+    )
 
     # 4) Jerárquico
-    labels_hier, customer_df = clustering_jerarquico(X, customer_df, n_clusters=4, sample_size=300)
+    labels_hier, customer_df = clustering_jerarquico(
+        X, customer_df, n_clusters=4, sample_size=300
+    )
 
     # 5) Apriori
     transactions = preparar_transacciones(df)
-    basket_df, frequent_itemsets = aplicar_apriori(transactions, min_support=0.02)
+    basket_df, frequent_itemsets = aplicar_apriori(
+        transactions, min_support=0.02
+    )
 
     # 6) Reglas
     rules, rules_filtered = generar_y_filtrar_reglas(
