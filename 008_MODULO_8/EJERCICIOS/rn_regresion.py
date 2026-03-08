@@ -11,7 +11,7 @@ from tensorflow.keras.layers import Dense
 import matplotlib.pyplot as plt
 
 # Paso 0: carpeta absoluta donde se guardarán las figuras
-FIG_DIR = r"D:\000_ANALISTA DATOS , TALENTO DIGITAL\007_A8\EJERCICIOS\figuras"
+FIG_DIR = r"D:\000_ANALISTA_DATOS\008_MODULO_8\EJERCICIOS\figuras"
 os.makedirs(FIG_DIR, exist_ok=True)
 
 # Paso 1: crear dataset sintético de regresión

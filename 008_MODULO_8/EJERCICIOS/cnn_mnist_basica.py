@@ -67,7 +67,7 @@ print(f"Loss en test: {loss_test:.4f}")
 print(f"Accuracy en test: {acc_test:.4f}")
 
 # 8. Mostrar una predicción sobre una imagen real del test set
-idx = 0  # puedes cambiar el índice para ver otras imágenes
+idx = 1  # puedes cambiar el índice para ver otras imágenes
 imagen = x_test[idx]
 etiqueta_real = y_test[idx]
 

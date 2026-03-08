@@ -66,7 +66,7 @@ clases = [
     "dog", "frog", "horse", "ship", "truck"
 ]
 
-idx = 0  # puedes cambiar el índice
+idx = 1  # puedes cambiar el índice
 img = x_test[idx]
 
 # y_test tiene forma (N,1), por eso usamos [0]

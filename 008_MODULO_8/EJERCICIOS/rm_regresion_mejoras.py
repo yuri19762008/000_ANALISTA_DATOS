@@ -14,7 +14,7 @@ from tensorflow.keras.optimizers import Adam
 # ================================
 # 0. RUTA PARA GUARDAR FIGURAS
 # ================================
-FIG_DIR = r"D:\000_ANALISTA DATOS , TALENTO DIGITAL\007_A8\EJERCICIOS\figuras"
+FIG_DIR = r"D:\000_ANALISTA_DATOS\008_MODULO_8\EJERCICIOS\figuras"
 os.makedirs(FIG_DIR, exist_ok=True)
 
 # ================================
