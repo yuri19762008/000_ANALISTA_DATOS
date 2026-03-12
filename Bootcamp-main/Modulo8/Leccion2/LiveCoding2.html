@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep Learning — Investigación Conceptual</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0c10;
+    --surface: #12151c;
+    --surface2: #1a1f2a;
+    --border: #252b38;
+    --accent: #4fffb0;
+    --accent2: #7c6aff;
+    --accent3: #ff6a6a;
+    --accent4: #ffb84f;
+    --text: #e8eaf0;
+    --muted: #6b7280;
+    --highlight: #1e2840;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* GRID BG */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(rgba(79,255,176,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79,255,176,0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HEADER */
+  header {
+    padding: 5rem 0 3rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(79,255,176,0.08);
+    border: 1px solid rgba(79,255,176,0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 620px;
+    margin-bottom: 2.5rem;
+  }
+
+  .toc {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .toc a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0.25rem 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+
+  .toc a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* SECTIONS */
+  section {
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border);
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.6s ease;
+  }
+
+  section.visible { opacity: 1; transform: translateY(0); }
+
+  .section-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+
+  p { color: #b0b8c8; margin-bottom: 1rem; font-size: 0.97rem; }
+
+  /* HIERARCHY DIAGRAM */
+  .hierarchy {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 2.5rem 0;
+    position: relative;
+  }
+
+  .hier-box {
+    padding: 1.2rem 1.8rem;
+    border-left: 3px solid;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    transition: all 0.3s;
+    cursor: default;
+  }
+
+  .hier-box:hover { background: var(--highlight); }
+
+  .hier-box.ia { border-color: var(--accent4); margin-left: 0; }
+  .hier-box.ml { border-color: var(--accent2); margin-left: 3rem; }
+  .hier-box.dl { border-color: var(--accent); margin-left: 6rem; }
+
+  .hier-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .ia .hier-dot { background: var(--accent4); }
+  .ml .hier-dot { background: var(--accent2); }
+  .dl .hier-dot { background: var(--accent); }
+
+  .hier-label {
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: #fff;
+    min-width: 120px;
+  }
+
+  .hier-desc { font-size: 0.85rem; color: var(--muted); }
+
+  /* DATA CARDS */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+
+  .data-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem;
+    transition: all 0.3s;
+  }
+
+  .data-card:hover { border-color: var(--accent2); transform: translateY(-2px); }
+
+  .data-card h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .data-card.structured h3 { color: var(--accent4); }
+  .data-card.unstructured h3 { color: var(--accent2); }
+
+  .data-card ul { list-style: none; }
+
+  .data-card ul li {
+    font-size: 0.85rem;
+    color: var(--muted);
+    padding: 0.3rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .data-card ul li::before { content: '→'; color: var(--accent); font-size: 0.7rem; }
+
+  /* ARCHITECTURE TABS */
+  .arch-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .arch-tab {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    background: none;
+    color: var(--muted);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s;
+    letter-spacing: 0.05em;
+  }
+
+  .arch-tab:hover, .arch-tab.active {
+    background: var(--highlight);
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .arch-content { display: none; animation: fadeIn 0.3s ease; }
+  .arch-content.active { display: block; }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  .arch-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 2rem;
+  }
+
+  .arch-panel h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .arch-panel .use-cases {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+  }
+
+  .use-tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+  }
+
+  .use-tag.vision { background: rgba(255,184,79,0.12); color: var(--accent4); border: 1px solid rgba(255,184,79,0.2); }
+  .use-tag.nlp { background: rgba(124,106,255,0.12); color: var(--accent2); border: 1px solid rgba(124,106,255,0.2); }
+  .use-tag.tabular { background: rgba(79,255,176,0.12); color: var(--accent); border: 1px solid rgba(79,255,176,0.2); }
+  .use-tag.sequence { background: rgba(255,106,106,0.12); color: var(--accent3); border: 1px solid rgba(255,106,106,0.2); }
+  .use-tag.multi { background: rgba(180,180,255,0.12); color: #b4b4ff; border: 1px solid rgba(180,180,255,0.2); }
+
+  /* NEURAL NET VIZ */
+  .nn-viz { margin: 2rem 0; overflow: visible; }
+
+  svg text { font-family: 'DM Mono', monospace; }
+
+  /* FRAMEWORK COMPARISON */
+  .fw-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .fw-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .fw-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .fw-card.tf::before { background: var(--accent4); }
+  .fw-card.keras::before { background: var(--accent3); }
+  .fw-card.pt::before { background: var(--accent2); }
+
+  .fw-card:hover { transform: translateY(-3px); }
+
+  .fw-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+  }
+
+  .fw-org {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+  }
+
+  .fw-best {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  .fw-pros { list-style: none; }
+
+  .fw-pros li {
+    font-size: 0.78rem;
+    color: var(--muted);
+    padding: 0.25rem 0;
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .fw-pros li::before { content: '+'; flex-shrink: 0; }
+  .fw-card.tf .fw-pros li::before { color: var(--accent4); }
+  .fw-card.keras .fw-pros li::before { color: var(--accent3); }
+  .fw-card.pt .fw-pros li::before { color: var(--accent2); }
+
+  /* TRANSFER LEARNING */
+  .tl-flow {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+
+  .tl-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .tl-box .tl-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+  .tl-box .tl-label { color: #fff; font-weight: 600; margin-bottom: 0.2rem; font-size: 0.78rem; }
+  .tl-box .tl-sub { color: var(--muted); font-size: 0.7rem; }
+
+  .tl-arrow {
+    color: var(--accent);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  /* WHEN TO USE DL */
+  .checklist {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+  }
+
+  .checklist h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .checklist.yes h4 { color: var(--accent); }
+  .checklist.no h4 { color: var(--accent3); }
+
+  .checklist ul { list-style: none; }
+  .checklist ul li {
+    font-size: 0.85rem;
+    color: var(--muted);
+    padding: 0.35rem 0;
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+  }
+
+  .checklist.yes ul li::before { content: '✓'; color: var(--accent); font-weight: 700; }
+  .checklist.no ul li::before { content: '✗'; color: var(--accent3); font-weight: 700; }
+
+  /* FOOTER */
+  footer {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  footer p { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .fw-grid { grid-template-columns: 1fr; }
+    .hier-box.ml { margin-left: 1.5rem; }
+    .hier-box.dl { margin-left: 3rem; }
+  }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="tag">Investigación Conceptual</div>
+    <h1>Arquitecturas de<br><em>Deep Learning</em></h1>
+    <p class="subtitle">Exploración de cómo se diseñan y seleccionan arquitecturas de Deep Learning en función del tipo de datos y el problema a resolver.</p>
+    <nav class="toc">
+      <a href="#s1">01 · IA, ML, DL</a>
+      <a href="#s2">02 · Tipos de datos</a>
+      <a href="#s3">03 · Arquitecturas</a>
+      <a href="#s4">04 · Transfer Learning</a>
+      <a href="#s5">05 · Frameworks</a>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN 1: Jerarquía IA > ML > DL -->
+  <section id="s1">
+    <div class="section-num">01 — JERARQUÍA</div>
+    <h2>Relación entre IA, ML y Deep Learning</h2>
+    <p>Deep Learning no es sinónimo de IA ni de Machine Learning. Son conceptos anidados: el DL es un subconjunto del ML, que a su vez es un subconjunto de la Inteligencia Artificial.</p>
+
+    <div class="hierarchy">
+      <div class="hier-box ia">
+        <div class="hier-dot"></div>
+        <span class="hier-label">Inteligencia Artificial</span>
+        <span class="hier-desc">Toda técnica que permite a las máquinas imitar comportamiento inteligente (incluye reglas, búsqueda, lógica, aprendizaje).</span>
+      </div>
+      <div class="hier-box ml">
+        <div class="hier-dot"></div>
+        <span class="hier-label">Machine Learning</span>
+        <span class="hier-desc">Subconjunto de IA donde los modelos aprenden patrones directamente desde datos, sin ser programados explícitamente.</span>
+      </div>
+      <div class="hier-box dl">
+        <div class="hier-dot"></div>
+        <span class="hier-label">Deep Learning</span>
+        <span class="hier-desc">Subconjunto de ML que usa redes neuronales profundas (múltiples capas) para aprender representaciones jerárquicas automáticamente.</span>
+      </div>
+    </div>
+
+    <p>La diferencia clave: en ML clásico el ingeniero <em>extrae características</em> manualmente (feature engineering). En DL, la red aprende esas representaciones sola, lo que lo hace especialmente poderoso con datos no estructurados y a gran escala.</p>
+
+    <!-- Neural net SVG decorative -->
+    <div class="nn-viz">
+      <svg width="100%" height="140" viewBox="0 0 700 140">
+        <defs>
+          <radialGradient id="ng" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#4fffb0" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#4fffb0" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- connections (simplified) -->
+        <g stroke="#252b38" stroke-width="1" opacity="0.8">
+          <!-- input to h1 -->
+          <line x1="60" y1="35" x2="180" y2="25"/><line x1="60" y1="35" x2="180" y2="55"/><line x1="60" y1="35" x2="180" y2="85"/><line x1="60" y1="35" x2="180" y2="115"/>
+          <line x1="60" y1="70" x2="180" y2="25"/><line x1="60" y1="70" x2="180" y2="55"/><line x1="60" y1="70" x2="180" y2="85"/><line x1="60" y1="70" x2="180" y2="115"/>
+          <line x1="60" y1="105" x2="180" y2="25"/><line x1="60" y1="105" x2="180" y2="55"/><line x1="60" y1="105" x2="180" y2="85"/><line x1="60" y1="105" x2="180" y2="115"/>
+          <!-- h1 to h2 -->
+          <line x1="180" y1="25" x2="310" y2="35"/><line x1="180" y1="25" x2="310" y2="65"/><line x1="180" y1="25" x2="310" y2="95"/>
+          <line x1="180" y1="55" x2="310" y2="35"/><line x1="180" y1="55" x2="310" y2="65"/><line x1="180" y1="55" x2="310" y2="95"/>
+          <line x1="180" y1="85" x2="310" y2="35"/><line x1="180" y1="85" x2="310" y2="65"/><line x1="180" y1="85" x2="310" y2="95"/>
+          <line x1="180" y1="115" x2="310" y2="35"/><line x1="180" y1="115" x2="310" y2="65"/><line x1="180" y1="115" x2="310" y2="95"/>
+          <!-- h2 to h3 -->
+          <line x1="310" y1="35" x2="440" y2="25"/><line x1="310" y1="35" x2="440" y2="55"/><line x1="310" y1="35" x2="440" y2="85"/><line x1="310" y1="35" x2="440" y2="115"/>
+          <line x1="310" y1="65" x2="440" y2="25"/><line x1="310" y1="65" x2="440" y2="55"/><line x1="310" y1="65" x2="440" y2="85"/><line x1="310" y1="65" x2="440" y2="115"/>
+          <line x1="310" y1="95" x2="440" y2="25"/><line x1="310" y1="95" x2="440" y2="55"/><line x1="310" y1="95" x2="440" y2="85"/><line x1="310" y1="95" x2="440" y2="115"/>
+          <!-- h3 to output -->
+          <line x1="440" y1="25" x2="570" y2="50"/><line x1="440" y1="25" x2="570" y2="90"/>
+          <line x1="440" y1="55" x2="570" y2="50"/><line x1="440" y1="55" x2="570" y2="90"/>
+          <line x1="440" y1="85" x2="570" y2="50"/><line x1="440" y1="85" x2="570" y2="90"/>
+          <line x1="440" y1="115" x2="570" y2="50"/><line x1="440" y1="115" x2="570" y2="90"/>
+        </g>
+        <!-- input nodes -->
+        <g fill="#1a1f2a" stroke="#ffb84f" stroke-width="1.5">
+          <circle cx="60" cy="35" r="9"/><circle cx="60" cy="70" r="9"/><circle cx="60" cy="105" r="9"/>
+        </g>
+        <!-- h1 nodes -->
+        <g fill="#1a1f2a" stroke="#7c6aff" stroke-width="1.5">
+          <circle cx="180" cy="25" r="9"/><circle cx="180" cy="55" r="9"/><circle cx="180" cy="85" r="9"/><circle cx="180" cy="115" r="9"/>
+        </g>
+        <!-- h2 nodes -->
+        <g fill="#1a1f2a" stroke="#7c6aff" stroke-width="1.5">
+          <circle cx="310" cy="35" r="9"/><circle cx="310" cy="65" r="9"/><circle cx="310" cy="95" r="9"/>
+        </g>
+        <!-- h3 nodes -->
+        <g fill="#1a1f2a" stroke="#4fffb0" stroke-width="1.5">
+          <circle cx="440" cy="25" r="9"/><circle cx="440" cy="55" r="9"/><circle cx="440" cy="85" r="9"/><circle cx="440" cy="115" r="9"/>
+        </g>
+        <!-- output nodes -->
+        <g fill="#1a1f2a" stroke="#4fffb0" stroke-width="2">
+          <circle cx="570" cy="50" r="11"/><circle cx="570" cy="90" r="11"/>
+        </g>
+        <!-- labels -->
+        <text x="60" y="128" text-anchor="middle" fill="#6b7280" font-size="9">Entrada</text>
+        <text x="180" y="130" text-anchor="middle" fill="#6b7280" font-size="9">Capa 1</text>
+        <text x="310" y="115" text-anchor="middle" fill="#6b7280" font-size="9">Capa 2</text>
+        <text x="440" y="130" text-anchor="middle" fill="#6b7280" font-size="9">Capa 3</text>
+        <text x="570" y="112" text-anchor="middle" fill="#6b7280" font-size="9">Salida</text>
+        <text x="340" y="13" text-anchor="middle" fill="#4fffb0" font-size="9" font-weight="500">← Capas Ocultas (profundidad) →</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: Datos estructurados vs no estructurados -->
+  <section id="s2">
+    <div class="section-num">02 — TIPOS DE DATOS</div>
+    <h2>Estructurados vs No estructurados — ¿Cuándo usar DL?</h2>
+    <p>La elección entre ML clásico y Deep Learning depende en gran medida del tipo de datos disponibles y el volumen de ejemplos de entrenamiento.</p>
+
+    <div class="grid-2">
+      <div class="data-card structured">
+        <h3>📊 Datos Estructurados</h3>
+        <ul>
+          <li>Tablas SQL / CSV</li>
+          <li>Series temporales financieras</li>
+          <li>Registros de sensores IoT</li>
+          <li>Datos de CRM / ERP</li>
+          <li>Formularios médicos</li>
+          <li>Resultados de encuestas</li>
+        </ul>
+        <p style="margin-top: 1rem; font-size: 0.78rem; color: #6b7280;">→ ML clásico (XGBoost, Random Forest) suele ser más eficiente aquí.</p>
+      </div>
+      <div class="data-card unstructured">
+        <h3>🧠 Datos No Estructurados</h3>
+        <ul>
+          <li>Imágenes y video</li>
+          <li>Audio y voz</li>
+          <li>Texto libre (NLP)</li>
+          <li>Gráfos y redes</li>
+          <li>Datos 3D / LiDAR</li>
+          <li>Secuencias biológicas (ADN)</li>
+        </ul>
+        <p style="margin-top: 1rem; font-size: 0.78rem; color: #6b7280;">→ Deep Learning domina. Las redes aprenden representaciones automáticamente.</p>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top: 0;">
+      <div class="checklist yes">
+        <h4>✓ Usar DL cuando…</h4>
+        <ul>
+          <li>Tienes millones de ejemplos de entrenamiento</li>
+          <li>Los datos son imágenes, audio o texto</li>
+          <li>Las features son difíciles de definir manualmente</li>
+          <li>El problema es percepción, generación o traducción</li>
+          <li>Hay capacidad de cómputo (GPU/TPU)</li>
+        </ul>
+      </div>
+      <div class="checklist no">
+        <h4>✗ Preferir ML clásico cuando…</h4>
+        <ul>
+          <li>Los datos son escasos (&lt;10K ejemplos)</li>
+          <li>Necesitas interpretabilidad y explicabilidad</li>
+          <li>Los datos ya están tabulados y bien procesados</li>
+          <li>Los recursos computacionales son limitados</li>
+          <li>La latencia de inferencia es crítica</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: Arquitecturas -->
+  <section id="s3">
+    <div class="section-num">03 — ARQUITECTURAS</div>
+    <h2>DNN, CNN, RNN y Transformers</h2>
+    <p>Cada arquitectura fue diseñada para capturar un tipo distinto de estructura en los datos. Seleccionar la correcta es fundamental para el rendimiento del modelo.</p>
+
+    <div class="arch-tabs">
+      <button class="arch-tab active" onclick="showArch('dnn', this)">DNN</button>
+      <button class="arch-tab" onclick="showArch('cnn', this)">CNN</button>
+      <button class="arch-tab" onclick="showArch('rnn', this)">RNN / LSTM</button>
+      <button class="arch-tab" onclick="showArch('transformer', this)">Transformers</button>
+    </div>
+
+    <div id="arch-dnn" class="arch-content active">
+      <div class="arch-panel">
+        <h3>Deep Neural Networks (DNN)</h3>
+        <p style="color: #8090a8; margin-bottom: 0.8rem;">Red totalmente conectada (fully-connected). Cada neurona de una capa se conecta a todas las de la siguiente. Es la arquitectura base del DL.</p>
+        <div class="use-cases">
+          <span class="use-tag tabular">Datos tabulares</span>
+          <span class="use-tag tabular">Clasificación general</span>
+          <span class="use-tag tabular">Regresión</span>
+        </div>
+        <p style="color: #8090a8; font-size: 0.85rem;">Ideal para datos tabulares con features ya definidas. No asume ninguna estructura espacial ni temporal en los datos. Limitado para imágenes o secuencias por su alto número de parámetros.</p>
+      </div>
+    </div>
+
+    <div id="arch-cnn" class="arch-content">
+      <div class="arch-panel">
+        <h3>Convolutional Neural Networks (CNN)</h3>
+        <p style="color: #8090a8; margin-bottom: 0.8rem;">Utiliza filtros convolucionales que detectan patrones locales (bordes, texturas, formas). Aprovecha la localidad espacial de imágenes; los parámetros se comparten entre posiciones.</p>
+        <div class="use-cases">
+          <span class="use-tag vision">Visión por computadora</span>
+          <span class="use-tag vision">Clasificación de imágenes</span>
+          <span class="use-tag vision">Detección de objetos</span>
+          <span class="use-tag vision">Segmentación</span>
+          <span class="use-tag nlp">Audio (espectrogramas)</span>
+        </div>
+        <p style="color: #8090a8; font-size: 0.85rem;">Arquitecturas icónicas: VGG, ResNet, EfficientNet, YOLO. Son el estándar en tareas de visión. La idea de "peso compartido" reduce dramáticamente los parámetros frente a DNN puras.</p>
+      </div>
+    </div>
+
+    <div id="arch-rnn" class="arch-content">
+      <div class="arch-panel">
+        <h3>Recurrent Networks — RNN / LSTM / GRU</h3>
+        <p style="color: #8090a8; margin-bottom: 0.8rem;">Redes con conexiones recurrentes: la salida de un paso se retroalimenta al siguiente. Diseñadas para datos secuenciales donde el orden importa. LSTM y GRU resuelven el problema de gradientes desvanecientes del RNN simple.</p>
+        <div class="use-cases">
+          <span class="use-tag sequence">Series temporales</span>
+          <span class="use-tag nlp">NLP (pre-Transformers)</span>
+          <span class="use-tag sequence">Generación de texto</span>
+          <span class="use-tag sequence">Traducción automática</span>
+          <span class="use-tag sequence">Predicción financiera</span>
+        </div>
+        <p style="color: #8090a8; font-size: 0.85rem;">Hoy han sido reemplazadas en NLP por Transformers, pero siguen siendo relevantes para series temporales de longitud moderada y donde el contexto secuencial local es clave.</p>
+      </div>
+    </div>
+
+    <div id="arch-transformer" class="arch-content">
+      <div class="arch-panel">
+        <h3>Transformers & Mecanismo de Atención</h3>
+        <p style="color: #8090a8; margin-bottom: 0.8rem;">Introducidos en "Attention is All You Need" (2017). En lugar de procesar secuencias paso a paso, atienden a todos los tokens simultáneamente vía self-attention. Escalables y paralelizables.</p>
+        <div class="use-cases">
+          <span class="use-tag nlp">NLP / LLMs</span>
+          <span class="use-tag vision">Vision Transformers (ViT)</span>
+          <span class="use-tag multi">Multimodal</span>
+          <span class="use-tag multi">Generación de imágenes</span>
+          <span class="use-tag sequence">Bioinformática (AlphaFold)</span>
+        </div>
+        <p style="color: #8090a8; font-size: 0.85rem;">La arquitectura dominante actual. La base de GPT, BERT, T5, LLaMA, Stable Diffusion y prácticamente todos los modelos de frontera. Requiere grandes datasets y cómputo, pero Transfer Learning lo hace accesible.</p>
+      </div>
+    </div>
+
+    <!-- Tabla comparativa rápida -->
+    <table style="width:100%; margin-top:2rem; border-collapse:collapse; font-size: 0.8rem;">
+      <thead>
+        <tr style="border-bottom: 1px solid var(--border);">
+          <th style="text-align:left; padding:0.6rem; color: var(--muted); font-family:'DM Mono',monospace; font-weight:400; font-size:0.68rem; letter-spacing:0.1em;">ARQUITECTURA</th>
+          <th style="text-align:left; padding:0.6rem; color: var(--muted); font-family:'DM Mono',monospace; font-weight:400; font-size:0.68rem; letter-spacing:0.1em;">MEJOR PARA</th>
+          <th style="text-align:left; padding:0.6rem; color: var(--muted); font-family:'DM Mono',monospace; font-weight:400; font-size:0.68rem; letter-spacing:0.1em;">DEBILIDAD</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:0.7rem 0.6rem; color:#e8eaf0; font-weight:600;">DNN</td>
+          <td style="padding:0.7rem 0.6rem; color:var(--muted);">Datos tabulares y clasificación general</td>
+          <td style="padding:0.7rem 0.6rem; color:var(--muted);">No captura localidad ni orden</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:0.7rem 0.6rem; color:#e8eaf0; font-weight:600;">CNN</td>
+          <td style="padding:0.7rem 0.6rem; color:var(--muted);">Imágenes, audio, datos 2D</td>
+          <td style="padding:0.7rem 0.6rem; color:var(--muted);">No modela dependencias largas</td>
+        </tr>
+        <tr style="border-bottom:1px solid var(--border);">
+          <td style="padding:0.7rem 0.6rem; color:#e8eaf0; font-weight:600;">RNN/LSTM</td>
+          <td style="padding:0.7rem 0.6rem; color:var(--muted);">Series temporales, secuencias cortas</td>
+          <td style="padding:0.7rem 0.6rem; color:var(--muted);">Lento, difícil de paralelizar</td>
+        </tr>
+        <tr>
+          <td style="padding:0.7rem 0.6rem; color:#e8eaf0; font-weight:600;">Transformer</td>
+          <td style="padding:0.7rem 0.6rem; color:var(--muted);">NLP, visión, multimodal, LLMs</td>
+          <td style="padding:0.7rem 0.6rem; color:var(--muted);">Costo computacional alto</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SECCIÓN 4: Transfer Learning -->
+  <section id="s4">
+    <div class="section-num">04 — TRANSFERENCIA DE CONOCIMIENTO</div>
+    <h2>Modelos Preentrenados y Transfer Learning</h2>
+    <p>Entrenar una red profunda desde cero requiere millones de datos y semanas de cómputo. El <strong style="color:#fff;">aprendizaje por transferencia</strong> reutiliza el conocimiento de un modelo preentrenado en una tarea grande para adaptarlo a una tarea específica con pocos datos.</p>
+
+    <div class="tl-flow">
+      <div class="tl-box">
+        <div class="tl-icon">🌐</div>
+        <div class="tl-label">Modelo Base</div>
+        <div class="tl-sub">Preentrenado en dataset enorme (ImageNet, Common Crawl)</div>
+      </div>
+      <div class="tl-arrow">→</div>
+      <div class="tl-box">
+        <div class="tl-icon">❄️</div>
+        <div class="tl-label">Congelar Capas</div>
+        <div class="tl-sub">Se mantienen los pesos de las capas bajas (features genéricas)</div>
+      </div>
+      <div class="tl-arrow">→</div>
+      <div class="tl-box">
+        <div class="tl-icon">🔧</div>
+        <div class="tl-label">Fine-Tuning</div>
+        <div class="tl-sub">Se re-entrena la "cabeza" del modelo con datos de la tarea nueva</div>
+      </div>
+      <div class="tl-arrow">→</div>
+      <div class="tl-box">
+        <div class="tl-icon">🎯</div>
+        <div class="tl-label">Modelo Adaptado</div>
+        <div class="tl-sub">Alto rendimiento con mucho menos datos y tiempo</div>
+      </div>
+    </div>
+
+    <p><strong style="color:#fff;">¿Por qué funciona?</strong> Las capas iniciales de una red aprenden features universales (bordes, frecuencias, n-gramas) que sirven para casi cualquier problema dentro del mismo dominio. Solo las capas finales aprenden la tarea específica.</p>
+
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; margin-top: 1.5rem;">
+      <p style="color: var(--muted); font-size: 0.82rem; margin: 0;"><span style="color: var(--accent); font-family:'DM Mono',monospace; font-size: 0.7rem;">IMPACTO REAL</span><br><br>
+      BERT redujo de semanas a horas el tiempo necesario para alcanzar SOTA en NLP. ResNet preentrenado permite clasificar imágenes médicas con solo ~500 ejemplos. GPT-4 fue fine-tuneado con ~10K ejemplos RLHF. Transfer Learning democratizó el DL.</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: Frameworks -->
+  <section id="s5">
+    <div class="section-num">05 — ECOSISTEMA</div>
+    <h2>Frameworks: TensorFlow, Keras y PyTorch</h2>
+    <p>Los tres frameworks dominan el ecosistema del DL. La elección depende del contexto: producción, investigación, prototipado rápido o despliegue en dispositivos.</p>
+
+    <div class="fw-grid">
+      <div class="fw-card tf">
+        <div class="fw-name">TensorFlow</div>
+        <div class="fw-org">GOOGLE BRAIN · 2015</div>
+        <div class="fw-best">Mejor para: producción a escala, despliegue móvil y edge (TFLite), pipelines MLOps completos.</div>
+        <ul class="fw-pros">
+          <li>Ecosistema maduro (TFX, TFServing, TFLite)</li>
+          <li>Excelente soporte para TPUs</li>
+          <li>TensorBoard para visualización</li>
+          <li>Grafos estáticos = optimización en producción</li>
+        </ul>
+      </div>
+      <div class="fw-card keras">
+        <div class="fw-name">Keras</div>
+        <div class="fw-org">API DE ALTO NIVEL · INTEGRADO EN TF</div>
+        <div class="fw-best">Mejor para: prototipado rápido, docencia, investigadores que priorizan velocidad de iteración.</div>
+        <ul class="fw-pros">
+          <li>API intuitiva y legible</li>
+          <li>Menos código boilerplate</li>
+          <li>Excelente para comenzar con DL</li>
+          <li>Compatible con múltiples backends (TF, JAX, PyTorch)</li>
+        </ul>
+      </div>
+      <div class="fw-card pt">
+        <div class="fw-name">PyTorch</div>
+        <div class="fw-org">META AI · 2016</div>
+        <div class="fw-best">Mejor para: investigación, desarrollo de nuevas arquitecturas, comunidad académica, LLMs.</div>
+        <ul class="fw-pros">
+          <li>Grafos dinámicos (define-by-run)</li>
+          <li>Debugging intuitivo con Python nativo</li>
+          <li>Domina la investigación (papers en NeurIPS, ICML)</li>
+          <li>HuggingFace, Lightning, Triton, TorchServe</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--muted);">
+      <strong style="color: #fff;">Regla práctica:</strong> si estás investigando o construyendo un prototipo, usa <span style="color: var(--accent2);">PyTorch</span>. Si necesitas llevar a producción en Google Cloud o dispositivos móviles, <span style="color: var(--accent4);">TensorFlow/Keras</span>. En la práctica, muchos equipos usan PyTorch para desarrollo y exportan a ONNX o TorchServe para producción.
+    </p>
+  </section>
+
+  <footer>
+    <p>Investigación conceptual · Deep Learning Architectures · 2026</p>
+  </footer>
+
+</div>
+
+<script>
+  // Tab switching
+  function showArch(id, btn) {
+    document.querySelectorAll('.arch-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.arch-tab').forEach(el => el.classList.remove('active'));
+    document.getElementById('arch-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('section').forEach(s => observer.observe(s));
+  // Make first section visible immediately
+  document.querySelector('section').classList.add('visible');
+</script>
+</body>
+</html>
